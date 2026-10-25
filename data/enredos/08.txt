@@ -1,0 +1,250 @@
+9091 seg
+9098 tem tra
+9103 gol mul
+9104 son fam
+9105 son
+9108 amp
+9109 amp
+9112 ami
+9113 mae seg
+9114 amp
+9121 pol
+9123 mon
+9131 son
+9133 car
+9141 car amp
+9142 amp doe
+9144 rob amp
+9146 gol
+9151 gue
+9162 esc
+9163 bic gue
+9173 fam
+9180 mon
+9182 det
+9185 pai gue
+9186 amp
+9193 pro
+9194 fam
+9195 vol tim
+9196 tra
+9198 esc nov
+9201 mon
+9209 amp
+9212 bic vol
+9237 nov tra
+9242 mae seg
+9243 fam maf
+9246 gol tra
+9254 gue
+9258 amp
+9260 imp
+9268 fam
+9300 son
+9301 son
+9317 seg
+9321 bio car
+9336 imp
+9339 imp
+9343 vol
+9344 oes
+9350 son
+9357 fam
+9370 bic
+9375 pai sob
+9380 mag
+9381 fad
+9392 det amp
+9399 mon
+9400 gol bio
+9408 inj ido
+9415 inj mul
+9419 son
+9437 ami ext
+9443 apo
+9448 vin
+9450 tra
+9451 imp
+9452 vol pai
+9461 oes
+9462 mon
+9463 sal
+9464 ext det
+9467 sal
+9469 tem
+9470 sal
+9471 sal
+9485 bio car
+9499 car
+9521 son
+9522 mon tra
+9523 oes vin
+9530 cor amp
+9531 bio
+9532 esp
+9542 ami
+9553 esp
+9556 bio
+9564 det
+9568 apo tra
+9569 gue
+9576 det bic
+9577 det bic
+9595 inj
+9600 esp
+9602 apo
+9604 tra
+9611 maf
+9624 fam
+9630 tri fam
+9658 seg
+9660 det
+9662 esp mul
+9664 mon
+9680 esp
+9684 seg fam
+9685 mae
+9688 pai
+9697 bic
+9699 esc
+9715 ext det
+9716 fam tra
+9727 det
+9734 vin
+9735 gue
+9736 tra
+9739 mul
+9748 mul
+9751 ass tra
+9759 tim
+9760 gue
+9771 esc
+9772 car
+9779 apo
+9781 vol fam
+9788 tra
+9792 bio mul
+9801 seg fam
+9805 son
+9811 ami
+9829 seg det
+9841 tra
+9844 rob
+9847 maf fam
+9863 maf
+9865 tra
+9869 vol
+9886 pol mul
+9888 tra
+9902 maf
+9907 amp cor
+9908 det
+9921 mon esc
+9942 pov maf
+9950 cor
+9954 car
+9958 inj
+9961 mag
+9964 pol
+9965 cri
+9967 cor mul
+9970 mag
+9979 tra
+9989 pov tra
+9992 ami
+10001 son
+10004 sob
+10013 cor gue
+10027 pov ami
+10029 tra
+10039 mon esc
+10045 amp
+10064 mul ami
+10070 det
+10076 ami
+10081 esc
+10085 ami
+10091 tra
+10092 fam
+10119 tra
+10128 fam seg
+10140 tem seg
+10148 gue
+10167 oes
+10177 car
+10182 sal
+10187 amp gue
+10190 maf
+10197 vin
+10204 esc
+10222 cri
+10224 tem
+10236 gol
+10237 cor fam
+10260 seg
+10264 oes fam
+10287 esc
+10293 fam amp
+10294 nov
+10308 inj amp
+10309 inj amp
+10313 imp
+10315 esc
+10338 fam tra
+10339 maf fam
+10343 esp fam
+10346 maf
+10347 maf
+10359 tra
+10368 apo
+10369 vol
+10373 fug
+10393 fam
+10399 tra
+10406 fam
+10408 esc
+10411 tim pro
+10413 ami
+10427 tem tra
+10432 det
+10439 amp bio
+10450 bio
+10452 mae
+10460 ami
+10472 amp mag
+10477 ami ido
+10491 fam
+10492 vol mul
+10503 fam tra
+10504 seg
+10506 tra
+10521 amp
+10526 cor mag
+10528 pol
+10546 esc
+10580 fam
+10589 tra
+10591 esc son
+10597 amp
+10598 det
+10602 mag
+10603 amp bio
+10618 esp
+10620 det
+10621 tra
+10628 ami
+10632 ass
+10635 tim
+10636 det
+10638 pol
+10645 tra
+10652 cor
+10653 amp
+10668 fam doe
+10670 det
+10671 cri tra
+10672 son
+10673 vol
+10676 vol fam
+10678 maf
+10688 nov

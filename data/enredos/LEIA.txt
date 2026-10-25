@@ -1,0 +1,16 @@
+Mini-enredos de cada título (camadas A e B), marcados à mão pelo Claude. Formato: id<espaço>códigos (1 ou 2).
+vol volta por cima depois de perder tudo | son correr atrás de um sonho | amp uma história de amor
+ree amor que se reencontra | bri brigam até se apaixonar | fam família que se reúne e acerta o passado
+pai pais e filhos que aprendem a se entender | mae mãe que faz tudo pelos filhos | ami grupo de amigos numa aventura
+imp amizade improvável | inj luta contra uma injustiça | tri julgamento/tribunal | gol golpe ou assalto planejado
+det detetive descobrindo o culpado | vin vingança | sob luta para sobreviver | fug fuga ou perseguição
+sal heróis salvando o mundo | tem viagem no tempo | mag ir parar num mundo mágico | tro troca de corpo ou de vida
+nov tentando se encaixar num lugar novo | esc jovens na escola | bic amizade entre pessoa e bicho
+bio vida de alguém famoso que existiu | gue gente comum sobrevivendo à guerra | cor reis, rainhas e a corte
+car carreira de cantor ou banda | tim time desacreditado que vence | doe enfrentar uma doença com coragem
+cri casal em crise | seg segredo de família que vem à tona | ass casa assombrada | mon monstro ou criatura atacando
+esp espiões e missões secretas | maf família da máfia ou vida no crime | oes pistoleiros no Velho Oeste
+pov história do povo brasileiro (sertão, favela, interior) | tra trapalhões se metendo em confusão
+fad conto de fadas, princesa e encanto | rob robôs ou máquinas que pensam | ido alguém mais velho que redescobre a vida
+pro professor que muda a vida dos alunos | pol bastidores da política e do poder | mul mulher enfrentando todos pelo que acredita
+cas preparativos de casamento e confusões | ext contato com extraterrestres | apo fim do mundo ou mundo destruído

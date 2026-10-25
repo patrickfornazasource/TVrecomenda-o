@@ -1,0 +1,250 @@
+2320 amp ido
+2323 esc
+2334 sal
+2335 sal
+2336 sal
+2337 mae
+2340 apo
+2346 det
+2358 amp son
+2365 ext
+2370 ext
+2371 fug
+2372 det esc
+2375 apo mul
+2376 esc
+2380 doe
+2381 pol
+2382 vin oes
+2388 car
+2395 mag tra
+2396 bic
+2399 seg fam
+2404 bic
+2418 amp tra
+2424 maf esp
+2425 tem
+2439 car bio
+2442 nov
+2444 inj
+2449 seg
+2451 mag
+2452 amp gue
+2453 mon
+2455 gue bio
+2456 cri
+2462 fam
+2466 mon amp
+2470 tim
+2471 pov oes
+2487 cas seg
+2494 car son
+2495 bic tim
+2501 apo
+2504 pol tra
+2510 fug
+2513 fug tra
+2519 imp ido
+2520 esp
+2525 pol tra
+2532 cor
+2543 esc
+2551 tra
+2555 bic
+2558 cor apo
+2559 vin cor
+2561 cor
+2562 ami gol
+2578 esp
+2579 maf
+2581 esc
+2594 son bio
+2596 pol
+2598 sob
+2599 sob
+2604 tem ext
+2611 esc amp
+2612 imp amp
+2613 bio
+2621 bic sob
+2622 esc
+2624 seg
+2639 esc
+2641 amp
+2644 bio inj
+2650 ext
+2653 cor bio
+2655 cor
+2663 fug
+2674 bio car
+2677 fug sob
+2681 mul
+2684 cas bri
+2688 tro tra
+2690 sal
+2692 fad nov
+2693 fam mag
+2694 imp nov
+2696 ext esc
+2699 amp
+2705 maf
+2707 gue
+2708 fug esp
+2710 amp gue
+2713 det mul
+2714 det mul
+2716 amp
+2717 fad
+2723 mag
+2727 amp mul
+2728 det fam
+2730 amp gue
+2733 vin
+2735 apo
+2738 seg
+2739 car
+2741 inj mul
+2744 inj mul
+2745 fug
+2748 apo fug
+2753 fug
+2754 sob
+2757 esp
+2758 tra fam
+2761 inj
+2763 amp
+2765 ext bic
+2767 gol
+2769 doe
+2770 tra
+2771 son car
+2778 ext
+2779 fad
+2780 sob
+2783 ido pai
+2784 son
+2790 tra
+2793 mon ass
+2795 mon
+2796 mon
+2802 seg
+2807 rob
+2808 ass
+2812 rob
+2815 ass mae
+2816 ass
+2817 ass
+2821 pov
+2832 rob fug
+2833 rob fug
+2838 pai
+2850 cri seg
+2854 son
+2855 son fam
+2859 imp
+2862 esp
+2867 pol
+2868 pol
+2870 esp pol
+2877 det
+2882 tra amp
+2887 fam
+2888 fam
+2892 tro
+2901 car
+2902 car
+2904 fad
+2906 gol
+2907 seg
+2914 maf tra
+2915 seg
+2920 fug
+2923 gol
+2924 esc
+2925 cri
+2931 cor
+2932 tra
+2936 mon esc
+2937 mon esc
+2942 tem
+2943 pov
+2945 vol fam
+2953 bio
+2957 tri inj
+2958 car
+2961 sal
+2968 seg
+2969 bio fam
+2975 seg mae
+2986 imp pro
+2987 bio imp
+2988 ami
+3006 maf fug
+3007 fug
+3009 imp oes
+3019 ass
+3020 tim
+3024 imp
+3027 esc
+3030 oes
+3033 ass mon
+3038 gue bio
+3040 tem
+3049 seg
+3056 amp esc
+3060 son
+3062 sob bic
+3074 gol amp
+3076 vin
+3080 inj
+3111 amp vol
+3124 amp
+3125 vin fam
+3128 tra
+3129 tra
+3137 seg
+3140 son
+3141 gue ami
+3146 mon
+3147 mon
+3149 bic
+3152 tro
+3154 tro
+3165 pro esc
+3172 gue inj
+3179 ass
+3181 car
+3183 tem pai
+3184 bio amp
+3185 tra
+3196 bri
+3200 fug mon
+3201 det
+3206 esp
+3209 pol
+3210 pol
+3211 mag fam
+3216 mag fam
+3217 inj
+3220 fug inj
+3225 vol tra
+3227 mae gue
+3239 mag sal
+3241 vin apo
+3242 vin
+3245 gue
+3249 pov
+3263 ext tra
+3267 seg
+3277 bio inj
+3279 pov
+3280 vin
+3286 amp
+3289 pai
+3294 pov
+3296 tim bio
+3302 vol
+3303 son
+3347 fam ass
+3348 maf
+3349 amp ass

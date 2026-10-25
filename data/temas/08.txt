@@ -1,0 +1,250 @@
+9091 jo fa ep tr
+9098 ep fu fl
+9103 mh fo
+9104 fa mc ma fl fm
+9105 an mc fl
+9108 ep ro fu fl
+9109 ro vi fl
+9112 vi ep fl fm
+9113 fa mh tr
+9114 ro ca tr
+9121 fl
+9123 rc fo
+9131 re su
+9133 mc fl
+9141 re mc ro
+9142 ro jo fe tr fm
+9144 fu ro fl fm
+9146 fo
+9151 re gu
+9162 jo fu
+9163 an gu ep
+9173 fa es fo
+9180 ma mh
+9182 fo
+9185 fa gu ep
+9186 an ro ep
+9193 jo
+9194 fa jo es tr
+9195 es su
+9196 mc am fl
+9198 jo fl
+9201 jo fo
+9209 ma ro jo
+9212 an fa su fl
+9237 rc fl
+9242 fa mh fo
+9243 fa fo
+9246 fa fl
+9254 re gu fo
+9258 ro ca ma tr
+9260 id ro fl
+9268 fa rc tr
+9300 es jo mh fl
+9301 mc jo
+9317 rc ep
+9321 re mc mh tr
+9336 ma mc am mh fl
+9339 ma mc am mh
+9343 re mh vi su
+9344 rc ep fo
+9350 mc mh su
+9357 jo fl
+9370 an fl
+9375 fa mh rc
+9380 ma am fl
+9381 ma mc mh fl
+9392 rc in ro fe
+9399 fa fo
+9400 re fo
+9408 re id mh
+9415 mh fe
+9419 co mc ma fl
+9437 am fu fl
+9443 fu fo
+9448 fo
+9450 fl
+9451 am fl
+9452 es fa tr
+9461 re rc ep
+9462 rc fo
+9463 fu
+9464 fu in
+9467 fu
+9469 fu
+9470 fu mh
+9471 fu ep
+9485 re mc ep
+9499 mc ro fl
+9521 jo vi fa
+9522 fl
+9523 rc ep fo
+9530 re ro ep mh
+9531 re ep
+9532 vi
+9542 jo vi fo
+9553 re fo
+9556 re es
+9564 re in
+9568 fo
+9569 re gu ep
+9576 an in fl fm
+9577 an in fl
+9595 fo
+9600 fo
+9602 fu jo
+9604 mh fl
+9611 fo
+9624 ep
+9630 jo fa in
+9658 fu ma
+9660 in
+9662 mh fa
+9664 fu fo
+9680 ca ep
+9684 fa ro
+9685 fa mh
+9688 rc fa fl
+9697 an fl
+9699 jo fa ep fl
+9715 fu in
+9716 fa fl
+9727 re in
+9734 mh fa fm
+9735 ep
+9736 fu fl
+9739 mh ro
+9748 mh
+9751 fe
+9759 es
+9760 re gu ep fo
+9771 jo ro
+9772 fo
+9779 fu
+9781 co fa
+9788 jo fl
+9792 re mh
+9801 fa ro mh
+9805 co
+9811 mh am
+9829 mh in
+9841 mh fl
+9844 fu fo
+9847 fa fo
+9863 ep fo
+9865 fl
+9869 tr
+9886 mh
+9888 fl
+9902 fa fo fm
+9907 ro ep mh
+9908 in
+9921 ma mh jo
+9942 rc fo
+9950 re ep
+9954 mc fl
+9958 re in
+9961 jo ma fl
+9964 rc
+9965 ro ca fl
+9967 re ep mh
+9970 ma ep
+9979 fl
+9989 jo fl fm
+9992 am fl
+10001 mc mh am fl
+10004 re tr
+10013 ep gu
+10027 am jo
+10029 fl
+10039 fu jo
+10045 ro fm
+10064 mh ep am
+10070 in
+10076 am fl
+10081 jo fl
+10085 jo fl
+10091 fl
+10092 fa fl fm
+10119 fl
+10128 fa rc
+10140 fa fu in
+10148 gu ep
+10167 rc ep fo
+10177 re mc
+10182 fo
+10187 ro gu
+10190 ep fo
+10197 fo
+10204 jo fa fl
+10222 ca
+10224 fu fl
+10236 fo
+10237 fa ep
+10260 fa
+10264 rc
+10287 mh jo
+10293 fa ro
+10294 mh vi ro fl
+10308 ep mh ro
+10309 ep mh ro
+10313 fa
+10315 jo fo
+10338 fa fl
+10339 fa fo fm
+10343 fa
+10346 in rc
+10347 fo
+10359 fl
+10368 fa
+10369 mh fl
+10373 fu
+10393 fa mh
+10399 jo fl
+10406 fa fl
+10408 jo ep fl
+10411 es jo rc
+10413 am ro fl fm
+10427 fu fl
+10432 in
+10439 re ep mh ro
+10450 re
+10452 fa mh fl
+10460 am mh
+10472 ro ma
+10477 am id mh fl fm
+10491 fa fl
+10492 mh in
+10503 fa fl fm
+10504 fa
+10506 vi
+10521 ro fm
+10526 ma fo fm
+10528 re ep
+10546 jo ep fl
+10580 fa
+10589 fl
+10591 mc jo fl
+10597 ro ep mh
+10598 in
+10602 ma jo mh
+10603 re ro
+10618 in mh
+10620 in
+10621 ca fl
+10628 am
+10632 ma
+10635 es
+10636 in fm
+10638 fo
+10645 fl
+10652 ep jo
+10653 ro
+10668 fa tr
+10670 re in fo
+10671 ca fl fm
+10672 re
+10673 mh fo
+10676 fa
+10678 in fo
+10688 jo

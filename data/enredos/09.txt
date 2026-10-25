@@ -1,0 +1,176 @@
+10695 tra
+10703 ami
+10704 amp
+10706 son
+10728 fam
+10729 sal
+10734 vol vin
+10737 tra
+10739 imp amp
+10740 mon
+10751 fam
+10759 det
+10765 sal
+10766 sal
+10806 amp
+10838 gol
+10840 fam
+10854 sal det
+10860 tra
+10863 mul ami
+10877 det tri
+10880 seg
+10938 det fam
+10945 ass tra
+10946 sob seg
+10952 pai
+10960 mon fam
+10965 amp
+10981 fam
+10993 seg
+11000 bic
+11005 seg
+11017 esc
+11019 nov fam
+11021 bic sal
+11023 tri tra
+11038 mae vol
+11046 sal
+11052 mon
+11054 mul
+11055 gue tra
+11060 gol
+11062 pol inj
+11063 vol
+11069 bic
+11095 bio
+11113 amp
+11125 maf fam
+11127 fam
+11140 tra
+11147 tem amp
+11148 amp
+11153 det
+11167 mae
+11172 mul
+11173 tra
+11174 tra
+11175 rob
+11183 ami
+11201 esc
+11202 tra
+11228 det
+11236 pol
+11241 tri inj
+11252 cri tra
+11257 cor
+11267 det
+11275 tra
+11278 tra
+11301 nov
+11311 inj
+11314 ami
+11317 det mon
+11319 esc
+11320 maf
+11332 nov
+11334 amp fam
+11337 tra
+11340 det pol
+11345 tra
+11357 amp
+11361 fam
+11365 det tri
+11370 bic
+11371 maf
+11381 sob
+11382 tra
+11387 son
+11388 sob
+11390 pol
+11391 apo mul
+11434 det mul
+11440 seg
+11467 ami
+11477 inj
+11482 tra
+11504 fam vin
+11512 det
+11523 tem tra
+11524 fam
+11525 bio
+11544 seg
+11546 pai
+11547 pov tra
+11550 fam
+11556 seg
+11558 tim mul
+11567 fam tra
+11573 fug tra
+11588 det mul
+11601 seg
+11603 tra
+11622 ami
+11633 det seg
+11636 det
+11640 maf
+11645 tra
+11647 fam
+11648 pol
+11654 apo seg
+11659 fam tra
+11670 fam
+11685 amp
+11700 tra
+11703 tra
+11707 cor
+11728 esc
+11736 sob
+11754 tra
+11759 fam pol
+11770 sob
+11779 sob
+11782 ami
+11799 cri tra
+11800 det
+11801 tra
+11813 fam amp
+11816 tim
+11817 inj mul
+11823 seg
+11848 cri
+11851 tra
+11876 tra
+11877 tra
+11890 det
+11898 fam
+11934 seg cri
+11939 nov
+11949 vol fam
+11954 pol
+11965 esc tra
+11972 tra
+11974 car
+11980 amp
+12002 sal
+12013 son
+12019 pol
+12021 rob
+12047 ami
+12051 maf det
+12057 tra
+12058 sal
+12061 tra
+12071 tra
+12078 fam apo
+12090 pol
+12092 gol
+12103 tra
+12104 det pol
+1517 bio maf
+1518 det bio
+3838 mag
+4061 inj fad
+5592 sal tra
+6353 seg sob
+6434 oes

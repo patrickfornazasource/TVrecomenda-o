@@ -1,0 +1,6 @@
+Temas de cada título (camadas A e B), marcados à mão pelo Claude a partir da sinopse e do que se sabe do filme.
+Formato: id<espaço>códigos separados por espaço.
+re aconteceu de verdade | fa família | am amizade | ro amor | ca casamento | ep outra época | gu guerra
+an bichos | mc música/dança | su superação | in investigação/crime | vi viagem | jo jovens/crianças
+ma magia/sobrenatural | fu futuro/espaço | es esporte | rc interior/campo | id gente mais velha | fe fé
+na Natal | co comida | tr triste | fo cenas fortes | fl leve/final feliz | fm famoso | mh mulher protagonista

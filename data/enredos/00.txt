@@ -1,0 +1,250 @@
+14 sob seg
+15 bri esc
+20 det
+21 sob
+22 tri inj
+25 inj sob
+28 sob gue
+33 ass
+47 gue
+56 ext
+62 ree
+66 gol
+68 seg
+69 tra esc
+73 tra
+80 ami
+85 apo sob
+86 apo
+88 apo sob
+89 apo
+90 tim
+92 gol tra
+95 gue
+103 oes
+121 bio inj
+130 amp
+131 doe imp
+132 amp
+161 son car
+165 apo rob
+192 mon gol
+194 bic mag
+195 imp
+197 ido pai
+198 tem
+203 ext
+212 bri
+215 car amp
+218 bio
+227 sal
+228 son
+229 pai
+230 fam tra
+236 fam inj
+237 amp
+239 fam son
+255 ami
+267 pai
+275 inj fug
+276 amp
+280 mul
+284 rob
+286 mul inj
+287 bio
+292 tra
+301 apo
+302 fad amp
+303 fad amp
+324 bio
+331 mag
+334 mon
+336 mon
+337 mon
+344 sob
+360 sob
+362 doe
+373 pol
+379 ami
+380 car son
+400 bio car
+410 sal
+411 sal
+418 cri
+426 maf bio
+431 fam
+433 gol pol
+443 seg
+445 bio gue
+452 vol tim
+459 inj tri
+464 cri tra
+465 seg
+466 nov amp
+468 amp
+469 amp
+470 doe ido
+476 mon tra
+482 fad cor
+487 tra
+492 gue
+502 det
+507 mag
+511 esc tra
+522 amp cor
+527 amp
+530 amp
+531 seg
+540 inj
+548 mon
+549 sal tra
+555 tim
+558 pro esc
+561 gue
+562 fug sob
+563 bio
+564 sob
+574 sal cor
+575 sal
+592 esp fug
+596 seg
+598 esc inj
+600 tem tra
+601 mon gol
+602 gol
+610 tra
+612 car vol
+613 esc amp
+625 oes
+626 maf
+627 inj det
+630 fam
+632 fam imp
+634 ext
+641 fam oes
+645 inj
+648 ami
+652 amp gue
+658 fam seg
+659 son pai
+663 esp tra
+666 pov tra
+672 nov apo
+673 fam
+674 fam
+676 sal
+677 sal rob
+678 imp gue
+680 ami
+681 mul
+682 bio
+716 seg
+718 car
+719 nov
+736 mon
+739 tem
+740 tem oes
+743 pov
+745 tra
+746 tra
+748 fug
+751 gol
+765 tra gol
+768 seg
+769 mon
+775 pai doe
+779 vin mul
+785 bic
+804 gol
+806 imp
+813 mon
+820 nov fad
+842 pov
+845 cor
+854 pai fug
+860 sal
+861 det
+862 sal
+864 sal
+866 sal
+892 pai
+897 mae
+901 bio doe
+911 bio amp
+919 ass tra
+920 ass fam
+923 cri
+924 amp
+925 ree
+927 son car
+928 pai
+937 car
+940 mag
+944 bio cri
+947 fad amp
+948 vin mul
+951 fam son
+965 vin cor
+976 det
+983 sal
+984 ido nov
+990 amp
+991 ree
+997 bio car
+1004 det tra
+1032 rob
+1034 tro
+1038 bio mul
+1040 pai
+1045 tra
+1051 gol
+1057 tra
+1075 ami
+1077 tem ami
+1079 son
+1085 vol
+1098 pai doe
+1100 esp
+1101 gue esp
+1108 gue sob
+1110 car
+1126 imp
+1129 son
+1133 mon
+1136 rob det
+1142 oes tra
+1150 fam tra
+1156 son car
+1158 vol tim
+1159 ami
+1162 seg
+1169 gue sob
+1176 son
+1181 bio maf
+1182 det
+1183 det
+1189 vol
+1193 car
+1196 vin
+1197 car tra
+1198 maf
+1201 cri
+1204 car
+1213 bio car
+1217 mon
+1221 esp
+1225 bio car
+1227 gol
+1242 det
+1244 amp
+1245 maf amp
+1246 maf
+1249 car
+1250 apo
+1251 mag amp
+1254 ami esc
+1255 gue
+1259 vin
+1261 tra
+1262 tra
+1266 gue inj

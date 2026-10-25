@@ -1,0 +1,250 @@
+14 fu fo mh
+15 ro jo fl fm
+20 in fo
+21 re su tr
+22 in fm
+25 re ep tr fo
+28 re gu fo
+33 ma
+47 gu ep tr fo fm
+56 fu fm
+62 ro ep
+66 re jo
+68 tr fo
+69 am jo fl
+73 am jo fl
+80 am tr
+85 fa fo fu
+86 fo fu
+88 fo fu
+89 fo fu
+90 es
+92 am fo
+95 gu ep fo fm
+103 rc ep fa fo
+121 re es su ep
+130 ro fm
+131 am tr su fl
+132 ro fl fm
+161 mc su
+165 fu
+192 fo
+194 an jo am fl
+195 am jo fl
+197 id vi fa
+198 ro fa fl
+203 fu
+212 ro ep fl fm
+215 mc ro ep jo
+218 re fo
+227 ma
+228 in
+229 fu fa vi
+230 fa ma fl fm
+236 fa ca ep fl fm
+237 ro
+239 fa ep mh ro fm fl
+255 an vi jo fl
+267 fa tr
+275 ep in
+276 ro ma mh
+280 ep mh
+284 fu jo tr
+286 re fa ep mh tr fm
+287 re es
+292 fl fm
+301 fu jo fo
+302 ma ro fl fm an
+303 ma ro mc fl fm
+324 re es fm
+331 ma mh fl
+334 fu fo fm mh
+336 fu fo
+337 fu fo mh
+344 re su tr es
+360 su
+362 ro ca tr
+373 ep
+379 mh am vi
+380 mc jo vi fl
+400 mc ep re fm
+410 jo fl
+411 jo ro tr
+418 fa ca fo
+426 re in fo
+431 fa fo
+433 re in ep
+443 fo
+445 re gu fo
+452 re es su fa fl
+459 re ep
+464 ro ca fa fl
+465 fo
+466 ro vi fl na mh fm
+468 mc ro ep fm tr
+469 mc ro ep
+470 id ca ro tr
+476 fo
+482 ma ro mh ep fl
+487 ep fl
+492 gu tr fo
+502 in fe
+507 ma an
+511 jo fl
+522 ro ep mh tr
+527 ro
+530 ro ca mh
+531 tr fu
+540 ep fo mh
+548 fo
+549 fu fa fl
+555 es
+558 jo su fl
+561 gu fo fm
+562 ep fo fa
+563 re fu
+564 re fu su
+574 ma
+575 ma fa
+592 re in
+596 in
+598 fa jo ep
+600 ma ep
+601 fo
+602 in
+610 na fa fl
+612 ep ro fl
+613 jo ro
+625 ep rc fo
+626 fo
+627 re ep in fo
+630 fa rc ep
+632 fa tr
+634 ep jo
+641 rc ep fa
+645 re es fo
+648 vi fl
+652 ro ep tr gu
+658 fa mh rc
+659 mc jo fa su fl
+663 fl
+666 rc fe fl fm
+672 fu fm
+673 fu fa
+674 fu fa
+676 fm fl
+677 fu
+678 ro gu vi mh ep
+680 vi ma fl
+681 mh fo
+682 re ep
+716 fa tr
+718 ep fo
+719 jo fo
+736 ma
+740 fu ep fl
+739 fu fl
+743 rc fo
+745 am fo
+746 am
+748 am
+751 re
+765 na fo
+768 in
+769 ma fo
+775 fa tr
+779 mh fo
+785 an tr fm
+804 re in
+806 am rc tr ep
+813 fo mh
+820 mh fl fm
+842 rc fe
+845 ep ro
+854 fa fo
+860 fm
+861 in
+862 fm
+864 na
+866 id
+892 fa jo rc ma
+897 fa
+901 re ca su
+911 re ro ep mh
+919 ma fl
+920 ma fa fl
+923 ca ro vi
+924 ro vi fm
+925 ro vi
+927 mc ro fl
+928 fa id ro
+937 mc ep
+940 ma
+944 re ca ep mh
+947 ma ro mc fl fm mh
+948 mh fo
+951 fa mc jo fl
+965 ep fe fm
+976 re id
+983 fa fl
+984 id vi am fl
+990 ro in
+991 ro tr
+997 re mc
+1004 in fl fm
+1032 fu tr
+1034 jo ma fl fm
+1038 re mh ca
+1040 fa ma
+1045 am fl
+1051 re
+1057 ma fl
+1075 am mc fl
+1077 am fu fl
+1079 mc jo su fl
+1085 tr
+1098 fa tr
+1100 in ca
+1101 gu ep mh fo
+1108 re gu fo
+1110 mc
+1126 fe fo
+1129 mc mh fo
+1133 ma fo
+1136 fu fm
+1142 rc ep fl
+1150 fa ro fl
+1156 mc jo ep fl
+1158 re es fa su fl
+1159 am
+1162 mh in
+1169 gu fo
+1176 es fo
+1181 re ep fo
+1182 in
+1183 in
+1189 mh fa
+1193 ep mc
+1196 fo
+1197 mc am fl fm
+1198 am jo fo
+1201 ro ca tr
+1204 mc ep fl
+1213 re mc
+1217 jo fo
+1221 fo
+1225 re mc fm
+1227 jo
+1242 in fo
+1244 ro jo vi fo
+1245 re ep fo ro
+1246 re fo fm
+1249 ep fo
+1250 fu fe fo
+1251 ma ro mc fl
+1254 am jo fl
+1255 gu jo ep tr
+1259 fo
+1261 vi fl
+1262 vi
+1266 re gu tr

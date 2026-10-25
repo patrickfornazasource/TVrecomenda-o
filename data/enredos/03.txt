@@ -1,0 +1,248 @@
+3365 ami
+3366 seg
+3371 seg
+3387 imp
+3394 det
+3397 vin cor
+3398 vin cor
+3400 det
+3402 gol
+3406 bio mul
+3407 gue inj
+3412 son
+3415 maf fam
+3428 mon
+3429 mon
+3434 pro
+3438 esp
+3440 esp
+3448 cri seg
+3454 ass bic
+3457 pai seg
+3462 imp bic
+3472 tra
+3473 gue
+3476 pol inj
+3480 oes
+3483 imp pro
+3484 vol nov
+3487 ami
+3494 det
+3510 imp
+3513 car
+3514 bio car
+3515 ido tra
+3520 imp ido
+3521 son bio
+3525 sob
+3527 amp esc
+3529 ido
+3531 gue fug
+3538 amp
+3542 imp
+3545 apo fam
+3546 apo
+3548 inj
+3549 sob
+3555 mon tra
+3557 fad mon
+3559 gue
+3560 tim pro
+3565 mon
+3568 tra
+3577 det
+3578 amp
+3580 ami sal
+3581 ami sal
+3584 gue
+3585 ext gue
+3587 sal
+3597 mul
+3612 bic
+3614 car
+3619 son esc
+3624 pro
+3625 esc amp
+3628 mon
+3629 mon
+3632 mon
+3635 mon
+3644 bio car
+3645 cor
+3649 mae doe
+3657 tra ami
+3660 fug mul
+3672 fam seg
+3680 tim tra
+3681 tim tra
+3689 vin
+3704 tra ami
+3706 bio inj
+3712 vin ido
+3713 bri amp
+3714 mag esc
+3715 mag esc
+3716 mag esc
+3717 mag esc
+3718 mag esc
+3719 mag esc
+3728 det oes
+3748 gol
+3758 esp
+3761 tra det
+3764 imp
+3770 seg
+3781 mon
+3782 mag
+3785 tem
+3786 mon
+3787 mon
+3789 inj mul
+3796 rob amp
+3800 fad son
+3802 fam
+3806 ass seg
+3808 seg
+3811 cor
+3819 pai
+3825 tim bic
+3834 gol
+3835 ree
+3842 son
+3843 oes vin
+3849 fug
+3854 fam
+3857 mon
+3859 amp
+3865 tra
+3866 seg
+3868 ext tra
+3877 mag ami
+3878 gue mag
+3879 mag
+3888 esc imp
+3909 mag
+3912 ext imp
+3921 sal esc
+3922 sal
+3923 sal
+3925 sal
+3926 ido imp
+3927 esp fug
+3928 ree
+3930 mon mul
+3933 ext tra
+3937 tra
+3941 pai
+3942 det
+3948 mag pai
+3955 apo
+3958 bic
+3961 tra
+3969 bic mae
+3970 mon fam
+3982 gue inj
+3984 tra
+3985 fam
+3986 fam
+3987 det tra
+3996 mul
+4000 ass
+4007 amp
+4026 mag
+4041 bic
+4042 bic
+4047 tra
+4048 imp
+4056 fam
+4062 fam nov
+4064 sob mul
+4065 sob mul
+4066 mul
+4067 mul
+4068 inj
+4071 esp
+4075 inj tri
+4081 gue
+4085 son
+4086 gol mul
+4088 det
+4093 sob apo
+4101 pai inj
+4110 car
+4112 bic ami
+4114 bic
+4115 bic
+4123 seg
+4127 amp
+4128 det
+4130 pol
+4138 mag
+4140 doe
+4152 bic
+4162 amp
+4166 ami tra
+4169 ass
+4179 bio gue
+4185 oes vin
+4188 amp
+4189 vin oes
+4191 sob fam
+4193 seg
+4194 tra
+4195 seg mae
+4196 gol
+4205 inj
+4213 fam sal
+4218 ext sal
+4223 pai
+4225 sal
+4226 sal
+4228 son
+4236 inj esp
+4237 esp maf
+4242 gue vin
+4245 det
+4262 inj
+4263 car
+4264 gol
+4266 fam esc
+4267 inj
+4268 ass
+4269 ass
+4270 ass
+4272 ass
+4273 det
+4276 pai
+4280 ido imp
+4286 sal pai
+4292 mon
+4297 sob
+4298 son
+4307 det pai
+4309 apo
+4318 sob
+4320 fug esp
+4331 tim bio
+4337 ass tri
+4340 seg
+4343 vin
+4346 pov
+4352 rob det
+4354 bio fam
+4357 rob imp
+4359 sal
+4360 sal
+4361 vol sal
+4365 vin
+4369 fug
+4379 gol vin
+4380 mon
+4382 mon
+4389 esc
+4410 tra
+4411 tra
+4415 tem
+4417 gol mul
+4422 esp
+4442 det

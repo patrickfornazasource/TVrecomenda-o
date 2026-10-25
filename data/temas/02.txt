@@ -1,0 +1,250 @@
+2320 ro ca id ep tr fm
+2323 jo ro ep mh
+2334 na fo fm
+2335 na fo
+2336 fo
+2337 fa mh tr
+2340 fu
+2346 in ep jo mh
+2358 ro mc jo ep fl fm
+2365 fu
+2370 fu fo
+2371 fo
+2372 jo in
+2375 fu jo mh
+2376 jo fa fl
+2380 re tr
+2381 fu fe mh ca
+2382 ep fo
+2388 ep
+2395 fe ma
+2396 an fl
+2399 fa fo
+2404 an ma vi fl
+2418 ca ma mh fl fm
+2424 re in fo
+2425 jo ma
+2439 re mc fo
+2442 jo
+2444 fo
+2449 fe in
+2451 ma
+2452 ro gu ep
+2453 ma fo
+2455 re gu ep
+2456 ca vi
+2462 fa ep fl
+2466 ro ma ep fo
+2470 es
+2471 rc ep fo
+2487 ro ca
+2494 mc mh ep
+2495 an es rc mh su fl
+2501 fu fo
+2504 gu fl
+2510 fo
+2513 am vi mh fl
+2519 id am fl fm
+2520 fm
+2525 gu fl
+2532 re ep mh ca
+2543 jo ro mh fl
+2551 am vi fl fm
+2555 an ma fa fl
+2558 fu fm
+2559 fu
+2561 fu
+2562 ma am fl
+2578 mh
+2579 in fo
+2581 jo mh fl
+2594 re es su fl
+2596 rc
+2598 fo
+2599 an su
+2604 fu
+2611 jo ro ep mh
+2612 ma ro fm
+2613 re
+2621 an su fl
+2622 jo mh
+2624 mh ep
+2639 jo fl
+2641 ro ma fl
+2644 re ep tr
+2650 fu jo fl
+2653 re ep mh
+2655 re ep mh
+2663 mc fo
+2674 re mc ep fm
+2677 re ep fo
+2681 mc mh fo
+2684 ro ep mh fl
+2688 an fl
+2690 fu fm
+2692 ma ro mh fl
+2693 fa ma mc fl
+2694 vi
+2696 fu jo
+2699 ro jo
+2705 in fo
+2707 gu fo
+2708 in
+2710 ro gu tr
+2713 mh in jo fl
+2714 mh in
+2716 ro mh fl
+2717 ma ro mh fl fm
+2723 fo
+2727 ro mh ep rc
+2728 in fa fl fm
+2730 ro gu ep mh fm
+2733 fo
+2735 fu fo
+2738 fo
+2739 ep
+2741 re mh su
+2744 re mh
+2745 re
+2748 fu
+2753 fo
+2754 fo
+2757 an fl
+2758 na jo fl fm
+2761 tr fm
+2763 ro ca ma fl
+2765 fu jo fl fm
+2767 mh id
+2769 jo tr
+2770 vi jo fl
+2771 mc fl
+2778 fu fo
+2779 ro mh ep fl
+2780 re su tr
+2783 id fa vi
+2784 mc jo fl
+2790 fl
+2793 fo
+2795 fo
+2796 fo
+2802 in
+2807 fu
+2808 ma
+2812 fu
+2815 fe ma fo fm
+2816 fe ma fo
+2817 fe ma fo
+2821 re fe
+2832 fu fo fm
+2833 fu
+2838 fa jo tr
+2850 ca
+2854 es
+2855 fa jo
+2859 ro mh fl fm
+2862 fo
+2867 re
+2868 re
+2870 re mh
+2877 in ep
+2882 ro fl
+2887 fa fl
+2888 fa vi fl
+2892 ro ca fa na fl
+2901 mc fl
+2902 mc fl
+2904 jo ma co fl
+2906 an fl
+2907 fo
+2914 in fo
+2915 fo
+2920 fo
+2923 fo
+2924 jo fl
+2925 ca fo
+2931 ep mh
+2932 vi
+2936 jo fo
+2937 jo fo
+2942 ro ma fl fm
+2943 jo
+2945 na fa fe fl fm
+2953 re ep
+2957 in
+2958 fl
+2961 fu fl
+2968 fo
+2969 re es fa
+2975 mh vi
+2986 am jo
+2987 re jo ep
+2988 vi jo fl
+3006 in
+3007 fo
+3009 am ep co
+3019 fe fo
+3020 es jo
+3024 am
+3027 jo mh
+3030 fo
+3033 fo
+3038 re gu
+3040 fa
+3049 fo
+3056 ro jo fl
+3060 re mc id mh fl
+3062 an
+3074 ro
+3076 fo
+3080 re co
+3111 ro ep fm
+3124 ro tr
+3125 fa fo
+3128 fl
+3129 fl
+3137 fa fo
+3140 mh am
+3141 gu am tr fo
+3146 fo ep
+3147 fo
+3149 an jo fl
+3152 fa fl
+3154 jo fo
+3165 re jo su
+3172 re gu ep
+3179 fe fo
+3181 fl
+3183 fa
+3184 re ro mh
+3185 am fl
+3196 ro fl
+3200 fo
+3201 in fo ep
+3206 fm
+3209 re
+3210 re
+3211 ma fa mh fl
+3216 ma fa mh fl fm
+3217 re tr
+3220 in fm
+3225 am fl
+3227 fa gu tr
+3239 ma ep
+3241 fu mh fo
+3242 fa fo
+3245 gu fo
+3249 rc fo
+3263 fu fl
+3267 in
+3277 re ep fm
+3279 ep
+3280 ep fo
+3286 ro
+3289 an fa fl
+3294 ro ep
+3296 re es ep su
+3302 an ma fl
+3303 fu
+3347 fa ma
+3348 fo
+3349 ro ma tr fm

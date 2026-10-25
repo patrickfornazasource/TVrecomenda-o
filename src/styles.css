@@ -1,0 +1,554 @@
+/* Interface de TV ("10 pés"): tudo em rem, e o rem acompanha o tamanho da tela.
+   Em 1280x720 o rem vale 20px; em 1920x1080, 30px. */
+:root {
+  --bg: #14111f;
+  --bg2: #221d33;
+  --card: #2c2642;
+  --text: #ffffff;
+  --muted: #c9c3dd;
+  --accent: #ffc83d;
+  --accent-text: #1a1400;
+  --focus: #ffc83d;
+  --ok: #5ee08a;
+  color-scheme: dark;
+  font-size: 15px; /* WebViews antigos */
+  font-size: max(15px, min(calc(100vw / 64), calc(100vh / 36)));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stage {
+  height: 100%;
+  /* margem de segurança contra o "overscan" das TVs */
+  padding: 2.2rem 3.2rem;
+  background: radial-gradient(ellipse at top, #2b2346 0%, var(--bg) 70%);
+}
+
+.screen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: enter 0.25s ease-out;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.title-xl {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+.title-l {
+  font-size: 2.2rem;
+  line-height: 1.15;
+  font-weight: 800;
+}
+.big {
+  font-size: 1.4rem;
+}
+.muted {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.accent {
+  color: var(--accent);
+}
+
+/* ---------- botões e foco ---------- */
+.btn,
+.tile,
+.alt-card,
+[data-focus] {
+  font: inherit;
+  color: inherit;
+  border: 0.18rem solid transparent;
+  outline: none;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    background 0.12s ease,
+    border-color 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.btn {
+  min-height: 3.2rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 1rem;
+  background: var(--card);
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn:focus,
+.tile:focus,
+.alt-card:focus,
+[data-focus]:focus {
+  border-color: var(--focus);
+  box-shadow:
+    0 0 0 0.25rem rgba(255, 200, 61, 0.35),
+    0 0.6rem 1.6rem rgba(0, 0, 0, 0.5);
+  transform: scale(1.06);
+  background: #3d3560;
+  position: relative;
+  z-index: 2;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+.btn.primary:focus {
+  background: #ffd96e;
+  border-color: #fff;
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--muted);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.btn.small {
+  font-size: 1.1rem;
+  min-height: 2.6rem;
+  padding: 0.4rem 1.1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.cols-5 .btn.choice {
+  font-size: 1.3rem;
+  padding: 0.6rem 0.8rem;
+}
+.tile.pick {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1.1rem;
+  min-height: 5rem;
+}
+.pick-icon {
+  font-size: 2.2rem;
+}
+.pick-label {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.btn.choice {
+  min-height: 6.2rem;
+  flex-direction: column;
+  font-size: 1.45rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  line-height: 1.15;
+}
+.btn.choice.short {
+  min-height: 4.4rem;
+}
+.btn.choice .icon {
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.back {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ---------- início ---------- */
+.home {
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  text-align: center;
+}
+.brand {
+  position: absolute;
+  top: 2.2rem;
+  left: 3.2rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+.btn.hero {
+  font-size: 2.6rem;
+  padding: 2rem 3.5rem;
+  border-radius: 2rem;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 800;
+  box-shadow: 0 1rem 3rem rgba(255, 200, 61, 0.2);
+}
+.btn.hero:focus {
+  background: #ffd96e;
+  border-color: #fff;
+}
+.btn.secondary {
+  font-size: 1.5rem;
+}
+.small-row {
+  position: absolute;
+  bottom: 2.2rem;
+  justify-content: center;
+}
+.tonight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ---------- perguntas ---------- */
+.ask .grid {
+  flex: 1;
+  align-content: center;
+  margin: 1rem 0;
+}
+.ask .btn.choice {
+  min-height: 7.4rem;
+}
+.ask .btn.choice.short {
+  min-height: 5rem;
+}
+
+/* ---------- resultado ---------- */
+.result-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 18rem;
+  gap: 2rem;
+  min-height: 0;
+}
+.main-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  min-height: 0;
+  border-radius: 1.6rem;
+  transition: box-shadow 0.1s;
+}
+.main-card.solo {
+  flex: 1;
+}
+.big-card {
+  flex: 1;
+  display: flex;
+  gap: 1.8rem;
+  background: var(--bg2);
+  border-radius: 1.6rem;
+  padding: 1.6rem;
+  min-height: 0;
+  overflow: hidden;
+}
+.poster {
+  flex: 0 0 8.5rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(160deg, hsl(var(--h) 60% 45%), hsl(calc(var(--h) + 40) 55% 22%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+}
+.info .title-l {
+  font-size: 2rem;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-width: 0;
+}
+.orig {
+  color: var(--muted);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+.meta {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.stars {
+  color: var(--accent);
+}
+.genres {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+.synopsis {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.why {
+  color: var(--ok);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.where {
+  font-size: 1.2rem;
+}
+.actions .btn {
+  font-size: 1.35rem;
+}
+.alts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.alt-card,
+.tile {
+  background: var(--card);
+  border-radius: 1.1rem;
+  padding: 0;
+  text-align: left;
+  overflow: hidden;
+}
+.alt-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.spin-hit {
+  box-shadow: 0 0 0 0.35rem var(--accent);
+  border-radius: 1.2rem;
+}
+
+.small-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.8rem;
+  min-height: 5.2rem;
+}
+.s-icon {
+  flex: 0 0 3.6rem;
+  height: 3.6rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(160deg, hsl(var(--h) 60% 45%), hsl(calc(var(--h) + 40) 55% 22%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.s-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.s-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.s-meta {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.toast {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  background: var(--ok);
+  color: #04210f;
+  font-weight: 800;
+  font-size: 1.3rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 1rem;
+}
+
+/* ---------- decidido ---------- */
+.decided {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+.confetti {
+  font-size: 5rem;
+  animation: pop 0.6s ease-out;
+}
+@keyframes pop {
+  from {
+    transform: scale(0.3) rotate(-20deg);
+  }
+}
+
+/* ---------- onboarding e listas ---------- */
+.onb-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.counter {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+.counter small {
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.counter.ok {
+  color: var(--ok);
+}
+.tiles {
+  gap: 0.9rem;
+}
+.onb-grid {
+  margin-top: 1.1rem;
+}
+.tile.on {
+  background: #1f5b37;
+  border-color: var(--ok);
+}
+.tile.on:focus {
+  background: #277346;
+  border-color: var(--focus);
+}
+.onb-actions {
+  margin-top: auto;
+}
+
+/* Celular na vertical: empilha */
+@media (max-aspect-ratio: 1/1) {
+  :root {
+    font-size: 15px;
+  }
+  .stage {
+    padding: 1rem;
+  }
+  html,
+  body,
+  #root {
+    overflow: auto;
+  }
+  .screen {
+    height: auto;
+    min-height: 100%;
+  }
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+  .cols-3,
+  .cols-4,
+  .cols-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .big-card {
+    flex-direction: column;
+  }
+  .poster {
+    flex-basis: 6rem;
+  }
+  .small-row,
+  .brand {
+    position: static;
+  }
+}
+
+/* ---------- perguntas de sim ou não ---------- */
+.yn-q {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+.yn-icon {
+  font-size: 5rem;
+  line-height: 1;
+}
+.yn-row {
+  justify-content: center;
+  gap: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+.btn.choice.yn-btn {
+  min-width: 13rem;
+  min-height: 5.4rem;
+  font-size: 2rem;
+}
+.btn.choice.yn-btn.ghost {
+  font-size: 1.5rem;
+  min-width: 10rem;
+}
+.yn-foot {
+  justify-content: space-between;
+}

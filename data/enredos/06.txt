@@ -1,0 +1,250 @@
+6817 inj
+6820 ass fam
+6823 gue
+6825 bic mag
+6860 vol
+6861 mon
+6862 mon mul
+6863 mon
+6864 mon sob
+6871 sob
+6875 vin
+6879 bri amp
+6883 mon
+6884 amp
+6885 bio
+6886 tem
+6892 fam
+6896 fad
+6897 fad
+6901 mag
+6903 tro cas
+6904 fam tra
+6906 bio
+6910 pai det
+6913 pai det
+6914 pai bic
+6919 sal
+6920 esc tra
+6921 tem pai
+6923 esc inj
+6924 sal
+6933 bri cas
+6934 oes
+6937 sal
+6941 seg
+6942 vol amp
+6945 maf bio
+6949 maf
+6951 amp
+6960 sob
+6966 vol pai
+6979 bri
+6980 amp gue
+6981 tra fug
+6985 sal
+6987 cas amp
+6988 pov
+6990 cor
+6996 gol mul
+6997 fug amp
+6999 tra amp
+7017 bio inj
+7036 sob
+7039 vin gue
+7043 tri inj
+7044 imp fam
+7059 ami
+7075 oes nov
+7080 oes
+7081 son imp
+7089 bio car
+7090 sal mul
+7095 bio mul
+7097 amp seg
+7099 sob
+7100 son
+7109 fam
+7110 pai
+7113 seg
+7117 mon
+7123 esp ido
+7128 gue
+7129 mae esc
+7132 det
+7133 pol
+7138 gol
+7144 vol
+7153 amp
+7164 ami
+7165 bic vol
+7166 bic vol
+7169 bic
+7170 pro imp
+7172 inj
+7175 ido
+7177 bic ido
+7188 amp
+7190 tim inj
+7191 vol amp
+7194 car
+7196 mon tra
+7205 vol
+7206 sob fug
+7207 gol
+7209 sob
+7212 mon
+7229 sal
+7230 mon tra
+7236 mon
+7240 vin sob
+7246 bic pol
+7247 cri
+7250 vin mul
+7258 amp
+7262 vol
+7264 amp doe
+7272 bio
+7278 bic amp
+7283 det
+7291 sal
+7293 bic
+7295 bio car
+7299 amp tim
+7309 pai apo
+7315 gol
+7316 maf pai
+7325 inj
+7327 sob
+7330 bic rob
+7331 rob ido
+7335 sal
+7338 bio car
+7342 maf
+7347 vol
+7352 vol son
+7369 gue
+7375 amp
+7379 esp
+7382 rob ami
+7384 gol
+7386 mae
+7395 seg mae
+7398 ami
+7399 det
+7405 fam
+7406 imp inj
+7407 seg
+7409 gol
+7410 seg mae
+7422 tra
+7432 amp
+7439 maf
+7442 bio
+7446 esc
+7455 bio inj
+7466 bri amp
+7475 amp
+7478 tem
+7491 sob
+7495 seg
+7532 pov
+7545 bic
+7551 car
+7565 bio
+7567 gue
+7572 sob
+7582 seg
+7583 maf
+7586 tra
+7593 pro car
+7595 bic det
+7600 gol
+7603 tra amp
+7605 mon esc
+7611 ido
+7613 det
+7614 bio vol
+7615 doe inj
+7629 ido
+7634 amp
+7635 det amp
+7639 son
+7660 tro
+7662 tro
+7669 bio inj
+7671 ami
+7672 pol fam
+7673 amp
+7675 vin
+7676 sob
+7677 gue mae
+7678 mag ami
+7681 amp
+7684 cri
+7687 amp
+7688 fug
+7690 vol
+7694 mag oes
+7707 seg
+7708 tra
+7709 inj
+7713 imp bio
+7716 ami
+7724 gol
+7738 amp
+7744 seg
+7751 tim
+7759 gol
+7763 ext
+7764 apo tra
+7766 inj imp
+7767 sal
+7768 sal
+7771 det bic
+7776 det
+7777 det
+7798 fug
+7822 fad imp
+7823 fad cas
+7831 det seg
+7832 maf
+7833 maf
+7835 inj
+7838 ami
+7851 det
+7865 mag
+7871 amp
+7874 tra fam
+7875 mag
+7877 vin
+7879 inj
+7880 amp
+7881 son
+7886 amp
+7887 ido
+7890 ass
+7894 nov
+7895 amp
+7896 pai
+7907 vin gue
+7911 imp seg
+7913 fam
+7918 mag
+7922 esp
+7935 tem tra
+7936 vin
+7939 seg
+7941 tem amp
+7942 imp
+7947 amp oes
+7948 vol amp
+7956 bio
+7958 mon
+7959 mon
+7967 mag
+7971 gol tra
+7979 apo inj
+7984 esp
+7987 bio
+7992 ext

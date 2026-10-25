@@ -1,0 +1,248 @@
+5711 mae tra
+5715 tra
+5716 mon tra
+5718 det fug
+5724 tem fam
+5736 inj
+5739 esp rob
+5743 mae det
+5744 bic
+5749 esp
+5750 esp
+5752 esp
+5753 esp
+5768 mon
+5770 rob fam
+5774 sal
+5775 sal
+5776 sal
+5781 nov
+5796 pro
+5799 tim
+5800 seg
+5805 mon
+5808 vin
+5812 bio
+5829 mon
+5831 mon
+5835 amp
+5837 esc
+5839 mon
+5840 imp
+5842 tra cor
+5851 seg
+5852 car
+5856 amp fug
+5860 mon
+5863 amp
+5864 amp
+5867 sal
+5869 sal
+5871 ass mon
+5872 det
+5882 maf
+5883 esp
+5885 maf
+5888 det
+5889 seg
+5894 amp
+5896 apo
+5899 esc mul
+5908 cri esp
+5910 tem
+5914 tro pai
+5916 pol inj
+5927 imp
+5930 bic cor
+5934 mul gue
+5935 mul gue
+5936 maf ido
+5937 det mul
+5938 inj
+5939 sal
+5940 det
+5941 mul gue
+5942 seg
+5953 fam pai
+5954 amp
+5956 vin
+5957 fad
+5959 car
+5980 inj
+6000 tri
+6013 imp
+6028 inj
+6032 ami
+6036 doe fam
+6042 det ami
+6051 car
+6058 gue
+6063 tra det
+6064 tra
+6078 apo
+6079 seg
+6080 bio
+6081 esc
+6092 car amp
+6101 tra fam
+6118 pai ido
+6122 inj
+6128 esc
+6133 mag
+6135 amp
+6136 mul
+6143 sal
+6147 imp oes
+6163 inj
+6164 sal
+6165 sal
+6170 inj esc
+6175 mae
+6177 vol
+6180 gol
+6181 mon
+6182 mon
+6187 mon
+6193 imp
+6208 fam
+6210 det inj
+6211 fug
+6214 fug fam
+6218 bio
+6219 tra
+6220 amp
+6221 vol ido
+6224 det
+6228 ext
+6237 mon
+6244 oes
+6245 seg
+6253 car
+6276 fam mae
+6279 bio car
+6282 doe
+6284 gol
+6285 gol
+6292 cas
+6293 tri
+6302 son bio
+6311 seg
+6316 gol
+6317 gol
+6325 pai mag
+6326 inj
+6327 vol
+6331 amp
+6332 gol tra
+6348 gol mul
+6351 ido
+6354 vin
+6356 sal
+6359 tra
+6362 fug
+6367 seg
+6371 car amp
+6383 maf ami
+6387 vin oes
+6389 det mul
+6394 amp
+6396 car
+6399 seg
+6410 car
+6415 esp
+6426 cri pai
+6428 pai mag
+6440 sal
+6441 det
+6443 esp gue
+6449 bio
+6455 amp
+6460 seg
+6461 ass mae
+6462 seg
+6476 ass mae
+6499 amp gol
+6503 vin
+6508 gue
+6513 fug ami
+6515 gue mon
+6518 son
+6531 mon
+6536 gol
+6537 bic nov
+6540 pov
+6544 cas pai
+6548 cri
+6552 mul
+6553 oes
+6557 tem amp
+6565 sob
+6566 mon esc
+6567 mon
+6568 mon
+6569 sob mae
+6570 mag gue
+6572 sal
+6585 ass
+6588 ass
+6589 gue mae
+6590 gol fam
+6598 amp
+6599 ree pai
+6613 bio
+6615 imp
+6623 esc
+6625 gue pai
+6628 bio gue
+6631 ext tra
+6635 vin
+6639 pro
+6645 amp
+6646 son
+6647 amp gue
+6648 mon
+6649 mae
+6662 nov pai
+6665 bic mae
+6666 seg
+6667 esp
+6671 fad amp
+6672 fad amp
+6676 imp
+6694 seg
+6696 esc ami
+6698 nov
+6700 ree
+6705 mag
+6717 amp
+6720 inj tri
+6721 mae seg
+6722 tra
+6726 pai gol
+6727 sob
+6732 seg
+6733 gue sob
+6734 amp
+6735 fam
+6740 bic
+6743 fug tra
+6750 fad
+6751 fad pai
+6753 mag
+6758 mag
+6759 mag
+6761 pov
+6763 sob
+6764 son
+6765 son
+6772 pai
+6781 gue
+6790 det
+6792 nov
+6793 amp
+6801 gol
+6802 maf fam
+6803 maf fam
+6804 nov amp
+6809 det pai
+6815 tra
