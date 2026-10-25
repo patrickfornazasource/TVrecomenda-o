@@ -25,11 +25,11 @@ Requisitos: Android 5 ou mais novo, com o WebView do sistema atualizado (vem nas
     ou "Quer algo de prender a atenção?" → "Quer levar um susto?", ou "Quer uma história que emociona?".
   - **Tanto faz** em qualquer pergunta deixa o app escolher o tipo.
   - Depois vêm quanto tempo ela tem e com quem vai assistir.
-  - Por fim, perguntas **sobre a história**, também de Sim ou Não. Primeiro, se fizer sentido, um aviso
-    ("Tudo bem se for triste?" ou "Tudo bem ter cenas fortes?"). Depois, **mini-enredos** que descrevem a cara
-    da história: "Que tal uma mulher que dá a volta por cima?", "Que tal uma família que se reencontra?",
-    "Que tal heróis que precisam salvar o mundo?"... São 48 enredos; o app pergunta primeiro o mais comum entre
-    os filmes que sobraram e para no primeiro Sim (ou depois de 4). "Já está bom, pode escolher" pula o resto.
+  - Por fim, a **história**. Se fizer sentido, vem antes um aviso de Sim ou Não ("Tudo bem se for triste?" ou
+    "Tudo bem ter cenas fortes?"). Depois aparece a lista de **mini-enredos** que existem entre os filmes que
+    sobraram, 8 por página, do mais comum para o menos comum: "Uma mulher que dá a volta por cima",
+    "Uma família que se reencontra", "Heróis que precisam salvar o mundo"... São 48 enredos ao todo.
+    Ela escolhe um, ou "Tanto faz, pode escolher".
   - A sugestão diz por que foi escolhida ("Tem bichos", "Aconteceu de verdade"...).
 - **Vamos nessa!** fecha a decisão ("Decidido!") e o app não oferece mais nada naquela noite, a não ser que ela peça.
 - **Outra** pergunta o motivo (um clique, ou Pular) e ajusta as próximas sugestões.

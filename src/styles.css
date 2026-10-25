@@ -552,3 +552,17 @@ p {
 .yn-foot {
   justify-content: space-between;
 }
+
+/* ---------- lista de enredos ---------- */
+.ask.enredos .title-xl {
+  margin: 0.2rem 0 0;
+}
+.ask .enredo-grid {
+  margin: 0.8rem 0;
+}
+.ask .btn.choice.enredo {
+  min-height: 7.6rem;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  padding: 0.8rem 1rem;
+}

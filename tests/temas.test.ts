@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import catalogJson from '../src/data/catalogo.json';
 import { candidatePool, emptyProfile, prepare, recommend } from '../src/engine/recommend';
-import { ENREDOS, hasTema, MAX_ENREDOS, nextPergunta, temaInfo, TEMAS } from '../src/engine/temas';
+import { enredoLabel, enredoOpcoes, ENREDOS, hasTema, nextFiltro, TEMAS } from '../src/engine/temas';
 import type { Catalog, Context, Mood } from '../src/engine/types';
 
 const p = prepare(catalogJson as Catalog);
@@ -33,32 +33,32 @@ describe('perguntas sobre a história', () => {
     }
   });
 
-  it('para no primeiro Sim, no máximo 4 enredos e 1 filtro, sem repetir', () => {
-    for (const mood of ['comedia', 'drama', 'romance', 'acao', 'suspense', 'desenho', 'terror', undefined] as (Mood | undefined)[]) {
-      for (const simNa of [1, 3, 99]) {
-        const asked: string[] = [];
-        const ctx = base(mood, { themes: {} });
-        for (;;) {
-          const pool = candidatePool(p, emptyProfile(), ctx, []);
-          const t = nextPergunta(pool, ctx, asked, rng);
-          if (!t) break;
-          expect(asked).not.toContain(t);
-          expect(temaInfo(t), t).toBeDefined();
-          const enredo = t.startsWith('e:');
-          ctx.themes![t] = enredo && asked.filter((x) => x.startsWith('e:')).length + 1 === simNa;
-          asked.push(t);
+  it('mostra a lista de enredos da noite, e o escolhido vem na sugestão', () => {
+    for (const mood of ['comedia', 'drama', 'romance', 'acao', 'suspense', 'desenho', 'terror', 'familia', undefined] as (Mood | undefined)[]) {
+      for (const company of ['sozinha', 'familia'] as const) {
+        const ctx = base(mood, { company, themes: {} });
+        const pool = candidatePool(p, emptyProfile(), ctx, []);
+        const opts = enredoOpcoes(pool, ctx);
+        if (pool.length >= 100) expect(opts.length, `${mood}/${company}`).toBeGreaterThanOrEqual(15);
+        expect(new Set(opts).size).toBe(opts.length);
+        for (const t of opts) expect(enredoLabel(t)).toMatch(/^[A-ZÀ-Ú].*[^?]$/);
+        for (const t of opts.slice(0, 8)) {
+          const r = recommend(p, emptyProfile(), { ...ctx, themes: { [t]: true } }, [], rng)!;
+          expect(hasTema(r.main.item, t), `${mood}/${company}/${t}: ${r.main.item.t}`).toBe(true);
         }
-        const enredos = asked.filter((x) => x.startsWith('e:'));
-        expect(enredos.length, `${mood}`).toBeGreaterThan(0);
-        expect(enredos.length).toBeLessThanOrEqual(Math.min(simNa, MAX_ENREDOS));
-        expect(asked.length - enredos.length).toBeLessThanOrEqual(1);
       }
     }
+  });
+
+  it('romance não oferece "uma história de amor"', () => {
+    const ctx = base('romance', { themes: {} });
+    expect(enredoOpcoes(candidatePool(p, emptyProfile(), ctx, []), ctx)).not.toContain('e:amp');
   });
 
   it('com crianças não pergunta de cenas fortes', () => {
     const ctx = base('acao', { company: 'familia', themes: {} });
     const pool = candidatePool(p, emptyProfile(), ctx, []);
-    for (let i = 0; i < 20; i++) expect(nextPergunta(pool, ctx, [], rng)).not.toBe('fo');
+    expect(nextFiltro(pool, ctx)).not.toBe('fo');
+    expect(nextFiltro(pool, { ...ctx, themes: { tr: false } })).toBeNull();
   });
 });

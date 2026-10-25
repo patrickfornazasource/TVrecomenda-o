@@ -328,7 +328,9 @@ export function candidatePool(p: Prepared, profile: Profile, ctx: Context, event
     ...(ctx.company === 'familia' && ['terror', 'suspense', 'acao'].includes(ctx.mood ?? '')
       ? []
       : [{ ...ctx, rejections: [], era: undefined, type: undefined, themes: undefined, time: undefined, company: ctx.company === 'familia' ? ('sozinha' as const) : ctx.company }]),
-    { ...ctx, rejections: [], era: undefined, type: undefined, themes: undefined, mood: undefined },
+    // quando o gênero cede, a história que ela escolheu continua valendo
+    { ...ctx, rejections: [], era: undefined, type: undefined, mood: undefined },
+    { ...ctx, rejections: [], era: undefined, type: undefined, time: undefined, mood: undefined },
     { ...ctx, rejections: [], era: undefined, type: undefined, themes: undefined, time: undefined, mood: undefined },
   ];
   let scored: ReturnType<typeof scoreAll> = [];

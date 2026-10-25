@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import catalogJson from './data/catalogo.json';
 import { emptyStats, favorite, firstNode, recordAccepted, recordFav, step, type Node } from './engine/perguntas';
-import { nextPergunta, temaInfo } from './engine/temas';
+import { enredoLabel, enredoOpcoes, nextFiltro, temaInfo } from './engine/temas';
 import { buildProfileFromPicks, candidatePool, emptyProfile, learn, prepare, recommend } from './engine/recommend';
 import type { Catalog, Context, Item, Pick, Profile, Reason, UserEvent } from './engine/types';
 import { focusFirst, useRemote } from './nav';
@@ -15,7 +15,8 @@ type Screen =
   | { name: 'home' }
   | { name: 'yn'; node: Node; path: Node[] } // path = perguntas anteriores, para o Voltar
   | { name: 'company' }
-  | { name: 'tema'; t: string; asked: string[] } // asked = temas perguntados antes deste
+  | { name: 'tema'; t: string } // aviso antes dos enredos (triste / cenas fortes)
+  | { name: 'enredos'; opts: string[]; page: number; filtro?: string } // filtro = aviso perguntado antes
   | { name: 'time' }
   | { name: 'result' }
   | { name: 'why' }
@@ -37,6 +38,8 @@ interface Session {
 }
 
 const newSession = (): Session => ({ ctx: { shown: [], rejections: [] }, rejects: 0, askedExtra: false });
+
+const ENREDOS_POR_PAGINA = 8;
 
 export default function App() {
   const [store, setStore] = useState<Stored>(() => load());
@@ -107,13 +110,26 @@ export default function App() {
     showRound(s);
   };
 
-  /** Depois da companhia: perguntas sobre a história enquanto elas ainda mudam a sugestão. */
-  const askTema = (s: Session, asked: string[]) => {
-    const pool = candidatePool(P, profile, { ...s.ctx, now: Date.now() }, store.events);
-    const t = nextPergunta(pool, { ...s.ctx, now: Date.now() }, asked);
-    if (!t) return showRound(s);
+  const poolOf = (s: Session) => {
+    const ctx = { ...s.ctx, now: Date.now() };
+    return { ctx, pool: candidatePool(P, profile, ctx, store.events) };
+  };
+
+  /** Depois da companhia: um aviso, se fizer sentido, e depois a lista de enredos. */
+  const askTema = (s: Session) => {
+    const { ctx, pool } = poolOf(s);
+    const t = nextFiltro(pool, ctx);
+    if (!t) return askEnredos(s);
     setSession(s);
-    setScreen({ name: 'tema', t, asked });
+    setScreen({ name: 'tema', t });
+  };
+
+  const askEnredos = (s: Session, filtro?: string) => {
+    const { ctx, pool } = poolOf(s);
+    const opts = enredoOpcoes(pool, ctx);
+    if (opts.length < 2) return showRound(s);
+    setSession(s);
+    setScreen({ name: 'enredos', opts, page: 0, filtro });
   };
 
   const accept = (it: Item) => {
@@ -238,16 +254,23 @@ export default function App() {
       case 'company':
         setScreen({ name: 'time' });
         return true;
-      case 'tema': {
-        const prev = screen.asked[screen.asked.length - 1];
-        if (!prev) {
+      case 'tema':
+        setScreen({ name: 'company' });
+        return true;
+      case 'enredos': {
+        if (screen.page > 0) {
+          setScreen({ ...screen, page: screen.page - 1 });
+          return true;
+        }
+        const { filtro } = screen;
+        if (!filtro) {
           setScreen({ name: 'company' });
           return true;
         }
         const themes = { ...session.ctx.themes };
-        delete themes[prev];
+        delete themes[filtro];
         setSession({ ...session, ctx: { ...session.ctx, themes } });
-        setScreen({ name: 'tema', t: prev, asked: screen.asked.slice(0, -1) });
+        setScreen({ name: 'tema', t: filtro });
         return true;
       }
       case 'why':
@@ -398,7 +421,7 @@ export default function App() {
               key={c.id}
               className="btn choice"
               data-autofocus={idx === 0 || undefined}
-              onClick={() => askTema({ ...session, ctx: { ...session.ctx, company: c.id, themes: {} } }, [])}
+              onClick={() => askTema({ ...session, ctx: { ...session.ctx, company: c.id, themes: {} } })}
             >
               <span className="icon">{c.icon}</span>
               {c.label}
@@ -409,18 +432,16 @@ export default function App() {
       break;
 
     case 'tema': {
-      const { t, asked } = screen;
+      const { t } = screen;
       const tema = temaInfo(t)!;
       const answer = (a: boolean | null) => {
         const themes = { ...session.ctx.themes };
         if (a !== null) themes[t] = a;
-        askTema({ ...session, ctx: { ...session.ctx, themes } }, [...asked, t]);
+        askEnredos({ ...session, ctx: { ...session.ctx, themes } }, t);
       };
       body = (
         <div className="screen ask yn" key={t}>
-          <p className="kicker">
-            {T.kickerTema} · pergunta {asked.length + 1}
-          </p>
+          <p className="kicker">{T.kickerTema}</p>
           <div className="yn-q">
             <span className="yn-icon">{tema.icon}</span>
             <h1 className="title-xl">{tema.q}</h1>
@@ -442,6 +463,44 @@ export default function App() {
             </button>
             <button className="btn small" onClick={() => showRound(session)}>
               {T.podeEscolher} ▶
+            </button>
+          </div>
+        </div>
+      );
+      break;
+    }
+
+    case 'enredos': {
+      const { opts, page } = screen;
+      const pages = Math.ceil(opts.length / ENREDOS_POR_PAGINA);
+      const shown = opts.slice(page * ENREDOS_POR_PAGINA, (page + 1) * ENREDOS_POR_PAGINA);
+      const pick = (t: string) => showRound({ ...session, ctx: { ...session.ctx, themes: { ...session.ctx.themes, [t]: true } } });
+      body = (
+        <div className="screen ask enredos" key={'enredos' + page}>
+          <p className="kicker">
+            {T.kickerTema}
+            {pages > 1 && ` · ${page + 1} de ${pages}`}
+          </p>
+          <h1 className="title-xl">{T.qEnredo}</h1>
+          <div className="grid cols-4 enredo-grid">
+            {shown.map((t, idx) => (
+              <button key={t} className="btn choice enredo" data-autofocus={idx === 0 || undefined} onClick={() => pick(t)}>
+                <span className="icon">{temaInfo(t)!.icon}</span>
+                {enredoLabel(t)}
+              </button>
+            ))}
+          </div>
+          <div className="row yn-foot">
+            <button className="btn small" onClick={onBack}>
+              ◀ {T.voltar}
+            </button>
+            {pages > 1 && (
+              <button className="btn small" onClick={() => setScreen({ ...screen, page: (page + 1) % pages })}>
+                {page + 1 < pages ? T.maisEnredos : T.primeirosEnredos} ▶
+              </button>
+            )}
+            <button className="btn small" onClick={() => showRound(session)}>
+              {T.tantoFazEnredo} ▶
             </button>
           </div>
         </div>

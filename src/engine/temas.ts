@@ -94,8 +94,6 @@ export const ENREDOS: Record<string, Tema> = {
   apo: { q: 'Que tal o fim do mundo, com sobreviventes tentando recomeçar?', icon: '🌋', why: 'Depois do fim do mundo' },
 };
 
-export const MAX_ENREDOS = 4;
-
 const isEnredo = (t: string) => t.startsWith('e:');
 export const temaInfo = (t: string): Tema | undefined => (isEnredo(t) ? ENREDOS[t.slice(2)] : TEMAS[t]);
 
@@ -126,7 +124,7 @@ export function temaAdjust(it: Item, themes?: Context['themes']): number | null 
     const info = temaInfo(t);
     const enredo = isEnredo(t);
     if (yes) {
-      if (!info?.filtro) adj += has ? (enredo ? 0.4 : 0.25) : enredo ? -0.15 : -0.12; // filtro com Sim = tanto faz
+      if (!info?.filtro) adj += has ? (enredo ? 1 : 0.25) : enredo ? -0.15 : -0.12; // filtro com Sim = tanto faz
     } else if (has) {
       if (info?.filtro) return null;
       adj -= enredo ? 0.35 : 0.3;
@@ -137,63 +135,63 @@ export function temaAdjust(it: Item, themes?: Context['themes']): number | null 
 
 const peso = (x: { score: number }) => Math.max(0.05, x.score);
 
-/**
- * Próxima pergunta sobre a história, a partir dos melhores candidatos do momento, ou null para parar.
- * 1) No máximo um filtro (triste / cenas fortes), só quando boa parte da lista é assim.
- * 2) Mini-enredos, começando pelo mais comum entre os candidatos, até ela dizer Sim a um.
- */
-export function nextPergunta(
-  pool: { item: Item; score: number }[],
-  ctx: Context,
-  asked: string[],
-  rng: () => number = Math.random,
-): string | null {
-  const themes = ctx.themes ?? {};
-  if (Object.entries(themes).some(([t, yes]) => yes && isEnredo(t))) return null;
-  if (asked.filter(isEnredo).length >= MAX_ENREDOS) return null;
-  const top = pool.slice(0, 60);
-  if (top.length < 6) return null;
+/** Quanto cada tema pesa entre os melhores candidatos (0 a 1); 0 quando quase nenhum título tem. */
+function shares(pool: { item: Item; score: number }[], n: number, min: number) {
+  const top = pool.slice(0, n);
   const total = top.reduce((s, x) => s + peso(x), 0);
-  const share = (t: string) => {
+  return (t: string) => {
     let w = 0;
-    let n = 0;
+    let c = 0;
     for (const x of top)
       if (hasTema(x.item, t)) {
         w += peso(x);
-        n++;
+        c++;
       }
-    return n < 3 ? 0 : w / total;
+    return c < min ? 0 : w / total;
   };
+}
 
-  if (!asked.some((t) => TEMAS[t]?.filtro)) {
-    let best: string | null = null;
-    let bestShare = 0.2;
-    for (const t of ['tr', 'fo']) {
-      if (t in themes || (ctx.mood && JA_DITO[t]?.includes(ctx.mood))) continue;
-      if (t === 'fo' && ctx.company === 'familia') continue;
-      const sh = share(t);
-      if (sh > bestShare) {
-        best = t;
-        bestShare = sh;
-      }
-    }
-    if (best && asked.length === 0) return best;
-  }
-
+/**
+ * Antes dos enredos, no máximo um aviso (triste / cenas fortes), só quando boa parte da lista é assim.
+ * Devolve o código do filtro ou null.
+ */
+export function nextFiltro(pool: { item: Item; score: number }[], ctx: Context): string | null {
+  const themes = ctx.themes ?? {};
+  if (pool.length < 6 || Object.keys(themes).some((t) => TEMAS[t]?.filtro)) return null;
+  const share = shares(pool, 60, 3);
   let best: string | null = null;
-  let bestValue = 0.05; // enredo que quase ninguém da lista tem não vale a pergunta
-  for (const code of Object.keys(ENREDOS)) {
-    const t = 'e:' + code;
-    if (asked.includes(t) || t in themes || (ctx.mood && JA_DITO[t]?.includes(ctx.mood))) continue;
+  let bestShare = 0.2;
+  for (const t of ['tr', 'fo']) {
+    if (ctx.mood && JA_DITO[t]?.includes(ctx.mood)) continue;
+    if (t === 'fo' && ctx.company === 'familia') continue;
     const sh = share(t);
-    if (!sh) continue;
-    const value = Math.min(sh, 0.5) * (0.85 + rng() * 0.3); // um pouco de variedade entre as noites
-    if (value > bestValue) {
+    if (sh > bestShare) {
       best = t;
-      bestValue = value;
+      bestShare = sh;
     }
   }
   return best;
+}
+
+/**
+ * Todos os mini-enredos que aparecem entre os candidatos da noite (pelo menos 2 títulos),
+ * do mais comum para o menos comum, para ela escolher um numa lista.
+ */
+export function enredoOpcoes(pool: { item: Item; score: number }[], ctx: Context): string[] {
+  const share = shares(pool, 150, 2);
+  return Object.keys(ENREDOS)
+    .map((code) => 'e:' + code)
+    .filter((t) => !(ctx.mood && JA_DITO[t]?.includes(ctx.mood)))
+    .map((t) => [t, share(t)] as const)
+    .filter(([, sh]) => sh > 0)
+    .sort((x, y) => y[1] - x[1])
+    .map(([t]) => t);
+}
+
+/** Texto curto do enredo para a lista: "Que tal uma casa assombrada?" vira "Uma casa assombrada". */
+export function enredoLabel(t: string): string {
+  const q = temaInfo(t)!.q.replace(/^Que tal /, '').replace(/\?$/, '');
+  return q.charAt(0).toUpperCase() + q.slice(1);
 }
 
 /** Frase do "por que este" a partir dos temas que ela pediu. */
