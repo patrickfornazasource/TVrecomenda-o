@@ -1,0 +1,44 @@
+Traços de cada FILME (camadas A e B), usados nas perguntas no estilo Akinator.
+Formato: uma linha por filme, "id código código ...", com TODOS os traços que valem para o filme.
+Marcados por agentes Haiku a partir do título, ano, gêneros, sinopse e palavras-chave.
+
+LUGAR
+cgr se passa numa cidade grande          cpq no interior, no campo ou numa cidade pequena
+mar no mar, na praia ou numa ilha        nev com neve, no inverno ou num lugar gelado
+esp no espaço sideral ou em outro planeta  eur na Europa
+bra no Brasil                            nat no Natal
+esc numa escola ou faculdade
+ÉPOCA
+pas a história se passa antigamente (antes de 1960)   fut a história se passa no futuro
+PERSONAGENS
+cri uma criança é personagem principal   ado adolescentes são os principais
+ido um idoso é personagem importante     mul uma mulher é a personagem principal
+cas um casal é o centro da história      ami um grupo de amigos é o centro
+fam uma família inteira é o centro       bic um bicho (animal) é importante na história
+fal bichos ou brinquedos que falam       her super-herói ou gente com superpoderes
+rei reis, rainhas, príncipes ou princesas  pol policial, detetive ou investigação
+sol soldados ou guerra                   mus cantor, músico, banda ou dançarino
+atl esporte (time, luta esportiva, corrida...)  med médico, hospital
+lad ladrões, golpistas ou assalto        agt espiões ou agentes secretos
+mag magia, bruxas ou magos               mon monstro, dinossauro ou criatura
+fan fantasma ou espírito                 ali extraterrestre
+rob robô ou máquina que pensa
+ACONTECIMENTOS
+via uma viagem, estrada ou aventura longe de casa   cam um casamento
+gra gravidez ou bebê                     mor a morte de alguém querido
+doe alguém enfrenta uma doença           jul um julgamento no tribunal
+per perseguição ou fuga                  lut muitas lutas, briga ou artes marciais
+exp tiros e explosões                    tem viagem no tempo
+seg um segredo ou mistério para descobrir  ass um crime ou assassinato
+can personagens cantam (musical)         des desastre, catástrofe ou luta para sobreviver
+ver baseado em história real
+TOM
+fel final feliz                          cho faz chorar
+ris dá muita risada                      mdo dá medo
+ten tenso, de roer as unhas              rom romance forte
+lev leve, sem violência                  pen faz pensar, história profunda
+vio cenas fortes de violência ou sangue  sex cenas de sexo ou nudez
+kid bom para ver com crianças
+FORMA
+cla muito famoso, um clássico que quase todo mundo conhece
+ani desenho animado ou animação          pb em preto e branco

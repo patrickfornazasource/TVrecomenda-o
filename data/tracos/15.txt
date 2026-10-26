@@ -1,0 +1,100 @@
+6817 cgr pol ado vio pen ten
+6820 fam cri fan mdo ten fel cla
+6823 pas sol ten pen exp cla
+6825 ani kid fel mar cri bic mag lev
+6860 cgr ado gra vio cho pen
+6861 sol ali mon exp vio ten mdo
+6862 pas mul ali mon ten vio per lut
+6863 esp fut ali mon ten vio exp lut per
+6864 sol ali mon exp vio ten lut cla
+6871 fam mor mdo ten vio
+6875 pas cgr mag ten pen seg mor
+6879 pas mul cas rom fel lev cpq
+6883 bic fam mon vio mdo ten
+6884 cgr rom ris cla lev sex
+6885 esp ver fam mor ten pen
+6886 tem pen ten
+6892 ani pas rei fam fel kid can lev
+6896 ani kid fal rei mag can fel lev rom cgr
+6897 rei mon mag lut fel lev rom ris cla kid fam ido
+6901 ani bic fal mag lut mon sol pen vio ado
+6903 rei rom ris lev kid cas
+6904 cgr rei ris lev fam cas
+6906 mul ado rom mus cas pen sex ver
+6910 cpq cri per seg ten vio pol pen fam cho
+6913 pol seg ten fam pen lev
+6914 ani kid fam bic mar fel lev ris cla cho
+6919 her cgr lad exp vio ten
+6920 ado ris sex
+6921 fut tem ris exp fam cri kid lev fel
+6923 can mus ado rom ris fel lev
+6924 ani fut exp vio ten her
+6933 rom ris cas lev fel cpq sex
+6934 cpq vio lad ten fam mor
+6937 sol exp vio ten fut
+6941 mdo ten ass cla pb vio seg mor
+6942 mor rom cho eur lev fel
+6945 pas lad pol exp vio ten ver per
+6949 cgr lad vio sex ris ten cla pen
+6951 rom ris sex
+6960 cgr vio ten exp per mdo ass
+6966 ver fam cgr cho fel pen cri kid lev
+6979 rom ris lev fel
+6980 pas sol rom cho pen eur mor
+6981 pas ris rom cla cgr mus lad lev pb
+6985 her esp ali fam ris fel lev kid exp
+6987 rom ris mor cas ami cgr eur cla lev
+6988 bra ver pen cpq
+6990 rei ver eur pen lev mor
+6996 mul lad ris lev
+6997 cas rom per pol vio ten cgr
+6999 rom ris sex
+7017 pas ver atl pen cho fel
+7036 pol lad lut vio exp ten cgr
+7039 pas ver sol vio pen cho eur ten
+7043 jul doe ten cgr pen
+7044 fam via pen cla lev cho
+7059 ani kid fal ris fel lev via ami
+7075 ani bic fal ris via kid cpq fel lad
+7080 pas cpq sol via fam vio ten cla
+7081 ani kid bic cgr fel lev ris cla fam
+7089 ver mus can cho fam cri fel
+7090 ani kid bic mag lut rei fel fam
+7095 ver pen lev mul ido fel
+7097 eur pas rom sex pen cho jul ado mul
+7099 mdo ris vio fam ten
+7100 fut ten exp seg per kid
+7109 eur fam ris pen cho
+7110 fut rob fam lut fel kid ten
+7113 pas rom ten seg cla pb cas mul
+7117 cgr mdo ten vio mon
+7123 agt exp ris lut lev per ten ido
+7128 pas sol exp lut ver ten
+7129 ani kid fam ado ris fel lev
+7132 pol ass vio ten mdo seg
+7133 cgr ris pen cla mor sex
+7138 lad ris exp lut per ten lev fel
+7144 sex fam cpq pen ris
+7153 rom rei ris sex fel cas
+7164 ami cgr mor cho pen lev
+7165 ani bic fal kid fam mor rei fel cla can lev
+7166 bic fal kid fam mor rei fel can lev
+7169 fut bic ten vio lut exp
+7170 ris pen cho ado cpq fel lev
+7172 ver pen vio seg cgr ten
+7175 pas rom pen cho eur ido cla
+7177 bic mul seg pen cho fel ido
+7188 ado rom cho cgr mor fam pen
+7190 esc atl ver ami fel cho pen kid
+7191 rom mul cho cri
+7194 mus can mul lev ver
+7196 mon mdo ris vio lad exp
+7205 ten cho pen sex doe vio
+7206 sol vio ver ten pen per
+7207 lad vio ten seg cla
+7209 lad exp ten per vio
+7212 mon mdo vio ten exp lut
+7229 esp fam rob exp ten cla lut mag mon kid fel
+7230 mdo ris mon vio sex
+7236 mdo mon vio ten seg fan
+7240 pas bic ten pen cpq fam vio per ver

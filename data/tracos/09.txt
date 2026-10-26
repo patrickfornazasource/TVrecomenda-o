@@ -1,0 +1,100 @@
+4000 mul mdo ris ten vio seg fan fam
+4007 pas lut rom ten vio sol pol mul cho
+4026 ani mag fal mul rom fel kid lev cho
+4041 ado ani bic mon fel kid lev cla ten
+4042 ado ani bic mon fam fel kid lev ten
+4047 cgr pas ris lev fel lad
+4048 cgr pas cri seg kid lev fel pen rob
+4056 cgr fam mdo ten pen
+4061 pas cgr ani fal bic mul sol fel kid rom cla ris mdo
+4062 cpq fam fel lev rom kid ris
+4064 fut ado mul des vio per ten cla
+4065 fut ado mul des vio per ten exp
+4066 fut ado mul sol des vio per ten exp
+4067 fut ado mul sol des vio exp ten mor lut
+4068 cpq fam ten pen cho
+4071 mar sol agt per ten exp cla vio fel
+4075 ver atl jul pen cho fel ten
+4081 sol ten exp vio des pen
+4085 pas atl ten pen cho cla cgr
+4086 cgr mul ami lad sex ten vio
+4088 pol seg ten exp vio
+4093 cgr des mor doe mon mdo exp ten vio bic cla per
+4101 cri fam pen cho ris fel
+4110 mus ver fam fel lev
+4112 pas ani bic fam gra kid lev fel cla ris ami
+4114 ani bic kid lev ris fel mon pas gra ami fam via
+4115 ani bic kid lev ris fel pas ami via des
+4123 mul pen cho pb mor
+4127 rom mul mus cgr sex fel ris
+4128 seg ten mdo vio ass
+4130 ten pen seg
+4138 cri fam fal kid lev fel ris cho
+4140 ado mul mor cho rom mus fam
+4152 ani bic mar cri pen fal ris vio
+4162 pas mag rom ten cgr rei pol pen
+4166 cgr ris rom lev ami fel
+4169 mdo ten vio fan cla cpq fam per
+4179 ver pas sol pen ten esc seg cho
+4185 pas ten vio pen cla
+4188 cpq rom mul pen
+4189 pas ten vio exp
+4191 ver des fam ten cho via fel
+4193 pen ten fam mdo nev cpq
+4194 ris vio ass lad cpq ten
+4195 pen mor mul fam vio cho sol
+4196 lad ten seg exp per cla mor lut
+4205 pen des
+4213 ani her fam cri ado mon per exp fel kid lev ris cla
+4218 ali exp des cgr sol cla ten vio fel
+4223 pas via fam cla ten lut seg kid lev fel ris exp
+4225 pas via cla ten lut seg mdo vio ris exp
+4226 pas via tem lut exp ten sol
+4228 pen ami
+4236 ver pol pen ten vio seg cpq
+4237 ver agt lad ten vio seg per
+4242 pas sol ten vio cgr cla exp lut ris
+4245 pol ris cgr rom seg
+4262 pen lad
+4263 mus cgr pen cho
+4264 lad ten seg cgr pol vio per
+4266 ani fam cri fal kid lev fel pen cho ris cla cgr
+4267 ver pen ten cgr
+4268 mdo fan ten fam vio cri
+4269 mdo fan ten fam vio
+4270 mdo fan ten fam vio
+4272 mdo fan ten fam
+4273 pol ten seg ass cpq
+4276 fam gra ris fel mar
+4280 cgr ris fel ido lev rom
+4286 esp fut fam pen ten cho rob via cla
+4292 mon mdo vio rom cla
+4297 ver des mar ten vio pas
+4298 mus cgr rom ami fam
+4307 pol ten ver sol mor cho pen fam
+4309 fut ten per lad cgr exp
+4318 ver via pen cho fam
+4320 pas cgr via agt ten rom cla per fel ris
+4331 ver atl fel pen lev
+4337 mdo mon jul ten vio ass fam ver
+4340 pen rom seg
+4343 lut vio ten cgr ver
+4346 bra cpq via sex vio rom pen
+4352 fut rob ten seg per cgr cla vio pol exp ass
+4354 ver mor fam atl pen cho ten
+4357 ani rob ami kid fel lev pas cpq ali cri
+4359 her ten exp cla per
+4360 her ten exp cla lut
+4361 her ten exp per lut
+4365 cgr mul vio sex ten pen
+4369 fut ten per exp lut vio
+4379 lad ten per exp cgr
+4380 mdo mon vio ten ami ass
+4382 mdo ten vio ado fan
+4389 ado ris pen cho lev cgr fel rom
+4410 ris
+4411 ris ami
+4415 tem med ten rom pen fut mor
+4417 cgr lad ris mul ten vio pol
+4422 agt ten exp vio
+4442 cgr ten seg ass cla rom pol

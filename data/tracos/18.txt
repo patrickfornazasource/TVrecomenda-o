@@ -1,0 +1,100 @@
+8176 esp sol rob exp lut vio cho ten mor cla
+8181 cgr pol mor ass seg ten pen
+8182 cpq ami ris fel lev kid pen
+8191 ris fam lev fel
+8195 fam cho pen mor doe cri rom fel
+8199 cgr ado rom mus lev ami fel
+8200 cgr ado mus rom ami lev fel ten
+8201 cgr ado mus rom ami lev fel
+8202 cgr ado mus rom ami lev fel
+8204 cgr fam pen ten fel
+8213 cgr doe fam cho pen
+8215 cgr pas lad ris ten cla fel
+8217 cgr fan mdo ten seg fam cas
+8219 cpq fam ten mdo vio seg mor mul sex pen
+8238 cgr ami mus vio ver ten
+8239 cpq ido via fam ver lev pen fel cho kid
+8244 cgr rom pen ris mor fel lev cho
+8250 bic fal cgr ris ami lev
+8252 cpq fan mon ris mdo ami ten
+8254 lut atl ami vio exp cgr ten
+8261 sol ris ami fel lev
+8274 cgr ido cri fam ami ris fel lev pen
+8277 cpq mar ado ami rom ris fam pen
+8279 cgr mul mdo ten vio sex pen
+8301 esp fut ten exp des pen mor
+8302 cpq mul fam mor ris pen fel vio
+8305 cgr her ris vio exp ten
+8307 cri ado ali des ten ami exp seg
+8309 ado ami ris sex fel
+8317 her mul esp exp vio cgr
+8321 her cgr esp rom fel cla lev kid exp
+8322 her cgr esp rom mul vio kid
+8323 her esp cgr rom lev kid exp fel
+8328 ani fam kid ris lev rei mon fel via mag
+8329 ani esp via fam kid ris lev fel rei
+8339 ver pen doe ris cgr lev
+8341 cpq ami ris lev fel pol
+8357 cgr mul mdo ten vio seg mag pen
+8359 ani via des ado fal mag fel pen kid
+8363 mul cas ten vio pen
+8383 cgr ami rom ris lev
+8393 pas mus rom cgr pen cho
+8394 mul ten vio pen ass mor
+8395 tem mdo vio ten ami pen mor cgr
+8396 cgr pen mor cas ris
+8406 cgr ten vio per lut agt fam
+8410 cpq fam ten mdo des pen doe
+8417 eur ten vio ass seg pas pen mor
+8418 mul ten pen ver
+8433 eur pas sol cri fam pen vio mor
+8441 mul pen ten mus cgr eur
+8448 ani ado mon fam kid ris ami lut cgr
+8451 pas bic via rom lut kid fel
+8456 cgr pen ten vio cla
+8460 mus lev kid fel
+8465 ani mus ris vio exp sol cgr eur
+8486 cri ado mdo vio ten ass seg fan cpq
+8487 cri ado mdo vio ten fan cpq
+8492 bra pas fam mor sol cas pen
+8494 pas ris pen fel cgr pb cla kid lev
+8496 cri fam pen cho ami lev
+8497 tem exp ten agt lut sol
+8500 pas eur ten pol mor ass seg cla pen
+8502 cgr ami ris lev fel rom
+8503 fut rob cgr exp vio ten sol cla des tem cri
+8508 pen pol mor
+8511 mdo vio ado ten fam per
+8512 mdo vio ten fam mor
+8515 pas ami ten pen cla cpq vio
+8516 ver ten agt pol lev
+8518 mdo vio ten cpq ado ass mor
+8525 cgr ris pen fam lev
+8529 cpq mus ami ris lev fel ado
+8530 cpq ado ami ris fel lev
+8536 cas rom doe cho ver pen eur
+8543 pas cpq pen ten vio fam mor
+8547 cgr ris seg pol ten
+8548 ali cgr vio ten ris lut
+8554 ali mdo ten vio nev mon cla
+8557 cgr rom ris ami mul lev fel cas
+8561 pas sol vio mor pen exp ten
+8564 ado cgr ten vio pen fam cri mul
+8567 fut cgr ten seg pen mor ass rob
+8570 ado ami vio ten cho pen
+8571 mus kid lev
+8575 fam mor ris cho pen lev
+8581 cgr rom ten lad seg pol
+8583 her esp mag cpq rom vio exp
+8584 her ris mag esp mon vio exp mul ami
+8588 her esp mag vio exp sol mon ten lut
+8589 cgr mul cri fam pen ten cho
+8596 sol ami ris via exp lad vio ten
+8607 agt mar ten exp vio cla rom
+8610 her ami vio exp ten pen cgr ris
+8623 ver pas mor cho pen vio cgr
+8629 cri tem ris mag mon via kid rei lad
+8632 tem ten pen sex seg
+8638 cpq ten vio pen jul ass
+8640 tem rom cho sex mul cgr cas
+8649 agt pol ten pen eur seg

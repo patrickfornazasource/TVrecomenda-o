@@ -1,0 +1,100 @@
+3565 mdo mon vio ris ten
+3568 ass cgr ris rom lut
+3577 cpq ris lad pol agt vio
+3578 eur mus rom sol cla cho
+3580 esp ami ris vio fal bic fel
+3581 esp ami ris fal bic vio cho fel
+3584 sol des vio ten pen
+3585 fut ali sol vio exp ten ami
+3587 esp rob cla lut exp sol kid
+3597 mul ass vio lut ten agt
+3612 bic fam cho ver pen kid
+3614 mus mag rom mor
+3619 mus ado cgr ris fam kid rom fel
+3624 esc ado cgr pen ten
+3625 ado rom esc pen cpq ris fel
+3628 mdo vio ten ado mul cpq cla ass
+3629 mdo vio ten mul cpq ass
+3632 mdo vio ten mul cpq ass
+3635 mdo vio ten mul cpq ass
+3644 mus pas ver sol
+3645 pas eur rei mor pen ten cla
+3649 pas eur mor cas fam cho doe
+3657 cgr ris ami sex
+3660 cri agt ass vio ten eur per lut
+3672 rom cas fam ris fel mul
+3680 ris atl mor fel
+3681 ris atl fel
+3689 ado ten vio sex mul pen
+3704 ris ami via sex
+3706 ver pas mul ten
+3712 ido cgr ten vio lad ass
+3713 cgr rom ris cla
+3714 mag cri kid esc fan mon
+3715 mag cri ado kid esc mon ten
+3716 mag ado esc rom mor kid
+3717 mag ado esc mor ten kid
+3718 mag cri esc ten kid bic
+3719 mag cri esc kid cla bic
+3728 pas cpq ten vio seg ass mor
+3748 ten seg ass vio cgr lad pol
+3758 agt ten vio lut exp per
+3761 pol cgr ris mul vio lut
+3764 ado mor ver mul pen ami ten
+3770 mul cas pen eur
+3781 her mon vio mag ris lut
+3782 her mon vio mag ris ten lut
+3785 ani fut rom pen ado tem
+3786 mdo mon vio sex ten
+3787 mdo mon vio ten mul
+3789 cpq mul ver pen cho ami
+3796 fut rob rom pen cgr
+3800 ani kid fam mag her mus ris fel mon
+3802 pas fam pen
+3806 fam mdo fan mon ten vio mor
+3808 mdo ten vio mul cpq
+3811 pas sol vio lut ten mul rei
+3819 ado cri mor vio pen
+3825 bic ver via lut
+3834 cgr ten seg lad mus pol
+3835 cgr rom mus ris pen
+3838 eur cgr mag lut vio ten
+3842 mus mul rom cgr ris fel
+3843 cpq ten vio seg pas mor
+3849 mdo mul vio ten cpq ass
+3854 fam ver cpq pen
+3857 mdo ten vio ado
+3859 rom esc ris mul
+3865 pas ris mus rei sol
+3866 cpq vio ten fam pen
+3868 esp ris ali rob ami fal bic
+3877 mag mon ami lut kid
+3878 mag mon sol lut vio ten
+3879 mag mon lut vio ten bic
+3888 cri kid cpq ami seg fel
+3909 cgr eur pen sex
+3912 esp ali ani kid cri fam ami ris fel fal
+3921 ado her mor rom vio ten cgr cla fel
+3922 ani her ado ten vio cgr ami ris
+3923 her ado eur ami ris esc mon fel
+3925 her ado cgr ten
+3926 ido cgr fam ris mor fel cho cas
+3927 agt ten vio exp lut per eur
+3928 rom mul mus eur cla
+3930 mdo mul ten vio
+3933 agt ali ris eur mul exp
+3937 cri kid ris fam lad
+3941 cri cgr fam pen
+3942 mul ass ris seg pol cpq
+3948 fam kid ris cri mag cla
+3955 fut des mor vio mdo ten
+3958 ani bic kid ris fam
+3961 ris ami cgr ass ten
+3969 bic rom mul pen cpq cgr
+3970 mon cgr fam ris ten vio pen
+3982 ver sol mor vio ten pen des
+3984 ani fam kid ris mon mag
+3985 ani fam kid ris mon mag
+3986 ani fam kid ris mon mag
+3987 pol cpq ris ass vio lut ami
+3996 pas eur mul mor pen cho cas

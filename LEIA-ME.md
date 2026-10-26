@@ -25,11 +25,11 @@ Requisitos: Android 5 ou mais novo, com o WebView do sistema atualizado (vem nas
     ou "Quer algo de prender a atenção?" → "Quer levar um susto?", ou "Quer uma história que emociona?".
   - **Tanto faz** em qualquer pergunta deixa o app escolher o tipo.
   - Depois vêm quanto tempo ela tem e com quem vai assistir.
-  - Por fim, a **história**. Se fizer sentido, vem antes um aviso de Sim ou Não ("Tudo bem se for triste?" ou
-    "Tudo bem ter cenas fortes?"). Depois aparece a lista de **mini-enredos** que existem entre os filmes que
-    sobraram, 8 por página, do mais comum para o menos comum: "Uma mulher que dá a volta por cima",
-    "Uma família que se reencontra", "Heróis que precisam salvar o mundo"... São 48 enredos ao todo.
-    Ela escolhe um, ou "Tanto faz, pode escolher".
+  - Por fim, perguntas no estilo **Akinator**, só com filmes: "Quer um filme com um bicho importante?",
+    "Tudo bem se fizer chorar?", "Quer que se passe no interior?"... Cada filme tem até ~15 traços de Sim ou Não
+    (58 no total), e o app sempre pergunta o traço que melhor divide os filmes que ainda estão no páreo.
+    Para quando sobram poucos (em média 8 perguntas, no máximo 12). "Já está bom, pode escolher" pula o resto.
+    Quem escolhe "Bastante tempo (série ou novela)" não passa pelo Akinator.
   - A sugestão diz por que foi escolhida ("Tem bichos", "Aconteceu de verdade"...).
 - **Vamos nessa!** fecha a decisão ("Decidido!") e o app não oferece mais nada naquela noite, a não ser que ela peça.
 - **Outra** pergunta o motivo (um clique, ou Pular) e ajusta as próximas sugestões.
@@ -64,6 +64,8 @@ Uma versão nova só instala por cima da antiga (mantendo o histórico dela) se 
 | `scripts/build_catalog.py` | Monta o catálogo enxuto (camadas A, B e C do briefing) |
 | `data/pt/*.tsv` | Títulos brasileiros e sinopses curtas em português dos filmes do TMDB (escritos à mão, conferir) |
 | `src/engine/perguntas.ts` | Árvore das perguntas de sim ou não e o "favorito" que aprende com ela |
+| `data/tracos/*.txt` | Traços de cada filme para o Akinator (lista em `LEIA.txt`), marcados por agentes Haiku a partir de título, sinopse e palavras-chave |
+| `src/engine/akinator.ts` | Perguntas do Akinator e a escolha da próxima pergunta |
 | `data/enredos/*.txt` | Os 1 ou 2 mini-enredos de cada título (lista dos códigos em `LEIA.txt`), marcados à mão a partir das sinopses |
 | `data/temas/*.txt` | Temas de cada título (bichos, história real, época, triste, cenas fortes...), marcados à mão a partir das sinopses |
 | `src/engine/temas.ts` | Perguntas sobre a história e a escolha da próxima pergunta |

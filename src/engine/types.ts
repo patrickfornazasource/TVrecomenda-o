@@ -16,6 +16,7 @@ export interface Item {
   st?: string[]; // onde assistir no Brasil
   th?: string[]; // temas da história (ver engine/temas.ts)
   en?: string[]; // mini-enredos (ver engine/temas.ts)
+  tr?: string[]; // traços dos filmes para as perguntas no estilo Akinator (ver engine/akinator.ts)
   q: 'A' | 'B' | 'C' | 'X'; // camada de qualidade (X = só no onboarding)
 }
 

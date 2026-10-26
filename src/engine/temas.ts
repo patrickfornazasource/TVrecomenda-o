@@ -1,8 +1,10 @@
 // Perguntas sobre a história. Cada título tem temas (data/temas/) e 1 ou 2 mini-enredos (data/enredos/),
 // marcados a partir das sinopses. Depois da companhia: no máximo um filtro ("Tudo bem se for triste?")
 // e mini-enredos ("Uma mulher que dá a volta por cima?") até o primeiro Sim.
-// No contexto, os enredos ficam em ctx.themes com o prefixo "e:" (ex.: "e:vol").
+// No contexto, os enredos ficam em ctx.themes com o prefixo "e:" (ex.: "e:vol") e os traços do
+// Akinator com "t:" (ex.: "t:nat"; ver engine/akinator.ts).
 import type { Context, Item } from './types';
+import { PERMISSAO, TRACOS } from './akinator';
 
 export interface Tema {
   q: string; // pergunta
@@ -95,7 +97,9 @@ export const ENREDOS: Record<string, Tema> = {
 };
 
 const isEnredo = (t: string) => t.startsWith('e:');
-export const temaInfo = (t: string): Tema | undefined => (isEnredo(t) ? ENREDOS[t.slice(2)] : TEMAS[t]);
+const isTraco = (t: string) => t.startsWith('t:');
+export const temaInfo = (t: string): Tema | undefined =>
+  isTraco(t) ? (TRACOS[t.slice(2)] as Tema | undefined) : isEnredo(t) ? ENREDOS[t.slice(2)] : TEMAS[t];
 
 /** Gêneros que já respondem o tema (não pergunta "romance?" para quem escolheu romance). */
 const JA_DITO: Partial<Record<string, string[]>> = {
@@ -110,6 +114,7 @@ const JA_DITO: Partial<Record<string, string[]>> = {
 };
 
 export function hasTema(it: Item, t: string): boolean {
+  if (isTraco(t)) return !!it.tr?.includes(t.slice(2));
   if (isEnredo(t)) return !!it.en?.includes(t.slice(2));
   if (t === 'br') return !!it.br;
   return !!it.th?.includes(t);
@@ -123,6 +128,13 @@ export function temaAdjust(it: Item, themes?: Context['themes']): number | null 
     const has = hasTema(it, t);
     const info = temaInfo(t);
     const enredo = isEnredo(t);
+    if (isTraco(t)) {
+      // Akinator: cada resposta empurra um pouco; quem erra várias vai ficando para trás
+      const libera = PERMISSAO.has(t.slice(2));
+      if (yes) adj += libera ? 0 : has ? 0.22 : -0.3;
+      else adj += has ? (libera ? -0.6 : -0.35) : 0.04;
+      continue;
+    }
     if (yes) {
       if (!info?.filtro) adj += has ? (enredo ? 1 : 0.25) : enredo ? -0.15 : -0.12; // filtro com Sim = tanto faz
     } else if (has) {

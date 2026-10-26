@@ -16,6 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "filmes_series.sqlite")
 PT_DIR = os.path.join(ROOT, "data", "pt")  # títulos/sinopses em português (id<TAB>título<TAB>sinopse)
 ENREDOS_DIR = os.path.join(ROOT, "data", "enredos")  # mini-enredos por título, ver data/enredos/LEIA.txt
+TRACOS_DIR = os.path.join(ROOT, "data", "tracos")  # traços dos filmes (id<espaço>códigos), ver data/tracos/LEIA.txt
 TEMAS_DIR = os.path.join(ROOT, "data", "temas")  # temas por título (id<espaço>códigos), ver data/temas/LEIA.txt
 OUT = os.path.join(ROOT, "src", "data", "catalogo.json")
 
@@ -89,6 +90,7 @@ def main():
 
     temas = codigos(TEMAS_DIR)
     enredos = codigos(ENREDOS_DIR)
+    tracos = codigos(TRACOS_DIR)
     print("temas:", len(temas), "enredos:", len(enredos))
 
     con = sqlite3.connect(DB)
@@ -136,6 +138,8 @@ def main():
             it["th"] = temas[r["id"]]
         if r["id"] in enredos:
             it["en"] = enredos[r["id"]]
+        if r["id"] in tracos:
+            it["tr"] = tracos[r["id"]]
         streaming = jl(r["streaming_br"])
         if streaming:
             it["st"] = streaming

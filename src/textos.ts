@@ -25,10 +25,7 @@ export const T = {
   // Perguntas
   qGenero: 'Que tipo de filme você quer ver hoje?',
   podeEscolher: 'Já está bom, pode escolher',
-  qEnredo: 'Que tipo de história?',
-  maisEnredos: 'Mais histórias',
-  primeirosEnredos: 'Voltar às primeiras',
-  tantoFazEnredo: 'Tanto faz, pode escolher',
+  perguntaN: (n: number, max: number) => `Pergunta ${n} de no máximo ${max}`,
   sim: 'Sim',
   nao: 'Não',
   qCompanhia: 'Vai assistir com quem?',

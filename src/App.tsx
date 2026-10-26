@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import catalogJson from './data/catalogo.json';
 import { emptyStats, favorite, firstNode, recordAccepted, recordFav, step, type Node } from './engine/perguntas';
-import { enredoLabel, enredoOpcoes, nextFiltro, temaInfo } from './engine/temas';
+import { temaInfo } from './engine/temas';
+import { MAX_AKIN, nextAkinator } from './engine/akinator';
 import { buildProfileFromPicks, candidatePool, emptyProfile, learn, prepare, recommend } from './engine/recommend';
 import type { Catalog, Context, Item, Pick, Profile, Reason, UserEvent } from './engine/types';
 import { focusFirst, useRemote } from './nav';
@@ -16,8 +17,7 @@ type Screen =
   | { name: 'home' }
   | { name: 'yn'; node: Node; path: Node[] } // path = perguntas anteriores, para o Voltar
   | { name: 'company' }
-  | { name: 'tema'; t: string } // aviso antes dos enredos (triste / cenas fortes)
-  | { name: 'enredos'; opts: string[]; page: number; filtro?: string } // filtro = aviso perguntado antes
+  | { name: 'akin'; t: string; asked: string[] } // perguntas no estilo Akinator; asked = as anteriores
   | { name: 'time' }
   | { name: 'result' }
   | { name: 'why' }
@@ -40,8 +40,6 @@ interface Session {
 
 const newSession = (): Session => ({ ctx: { shown: [], rejections: [] }, rejects: 0, askedExtra: false });
 
-const ENREDOS_POR_PAGINA = 8;
-
 // Cor de seção de cada tela, como nas seções de uma revista de programação
 const SCREEN_TONE: Record<Screen['name'], string> = {
   gosto: 'tomate',
@@ -50,8 +48,7 @@ const SCREEN_TONE: Record<Screen['name'], string> = {
   time: 'tomate',
   company: 'tomate',
   extra: 'tomate',
-  tema: 'gema',
-  enredos: 'gema',
+  akin: 'gema',
   result: 'petroleo',
   final: 'petroleo',
   why: 'petroleo',
@@ -132,26 +129,19 @@ export default function App() {
     showRound(s);
   };
 
-  const poolOf = (s: Session) => {
+  /** Depois da companhia: perguntas no estilo Akinator, só com filmes, até sobrar pouca coisa. */
+  const askAkin = (s: Session, asked: string[]) => {
     const ctx = { ...s.ctx, now: Date.now() };
-    return { ctx, pool: candidatePool(P, profile, ctx, store.events) };
+    const t = nextAkinator(candidatePool(P, profile, ctx, store.events), ctx, asked);
+    if (!t) return showRound(s);
+    setSession(s);
+    setScreen({ name: 'akin', t, asked });
   };
 
-  /** Depois da companhia: um aviso, se fizer sentido, e depois a lista de enredos. */
-  const askTema = (s: Session) => {
-    const { ctx, pool } = poolOf(s);
-    const t = nextFiltro(pool, ctx);
-    if (!t) return askEnredos(s);
-    setSession(s);
-    setScreen({ name: 'tema', t });
-  };
-
-  const askEnredos = (s: Session, filtro?: string) => {
-    const { ctx, pool } = poolOf(s);
-    const opts = enredoOpcoes(pool, ctx);
-    if (opts.length < 2) return showRound(s);
-    setSession(s);
-    setScreen({ name: 'enredos', opts, page: 0, filtro });
+  const afterCompany = (s: Session) => {
+    // "Bastante tempo" é série ou novela: aí não tem Akinator
+    if (s.ctx.time === 'maratona') return showRound(s);
+    askAkin({ ...s, ctx: { ...s.ctx, type: 'm', themes: {} } }, []);
   };
 
   const accept = (it: Item) => {
@@ -276,23 +266,16 @@ export default function App() {
       case 'company':
         setScreen({ name: 'time' });
         return true;
-      case 'tema':
-        setScreen({ name: 'company' });
-        return true;
-      case 'enredos': {
-        if (screen.page > 0) {
-          setScreen({ ...screen, page: screen.page - 1 });
-          return true;
-        }
-        const { filtro } = screen;
-        if (!filtro) {
+      case 'akin': {
+        const prev = screen.asked[screen.asked.length - 1];
+        if (!prev) {
           setScreen({ name: 'company' });
           return true;
         }
         const themes = { ...session.ctx.themes };
-        delete themes[filtro];
+        delete themes[prev];
         setSession({ ...session, ctx: { ...session.ctx, themes } });
-        setScreen({ name: 'tema', t: filtro });
+        setScreen({ name: 'akin', t: prev, asked: screen.asked.slice(0, -1) });
         return true;
       }
       case 'why':
@@ -447,7 +430,7 @@ export default function App() {
               key={c.id}
               className="btn choice"
               data-autofocus={idx === 0 || undefined}
-              onClick={() => askTema({ ...session, ctx: { ...session.ctx, company: c.id, themes: {} } })}
+              onClick={() => afterCompany({ ...session, ctx: { ...session.ctx, company: c.id } })}
             >
               <Ico name={c.icon} className="choice-ico" />
               {c.label}
@@ -457,18 +440,17 @@ export default function App() {
       );
       break;
 
-    case 'tema': {
-      const { t } = screen;
-      const tema = temaInfo(t)!;
+    case 'akin': {
+      const { t, asked } = screen;
       const answer = (a: boolean | null) => {
         const themes = { ...session.ctx.themes };
         if (a !== null) themes[t] = a;
-        askEnredos({ ...session, ctx: { ...session.ctx, themes } }, t);
+        askAkin({ ...session, ctx: { ...session.ctx, themes } }, [...asked, t]);
       };
       body = (
         <div className="screen ask yn" key={t}>
           <div className="yn-q">
-            <h1 className="display">{tema.q}</h1>
+            <h1 className="display">{temaInfo(t)!.q}</h1>
           </div>
           <div className="row yn-row">
             <button className="btn choice yn-btn primary" data-autofocus onClick={() => answer(true)}>
@@ -485,44 +467,9 @@ export default function App() {
             <button className="btn small quiet" onClick={onBack}>
               <Ico name="ChevronLeft" /> {T.voltar}
             </button>
+            <span className="akin-count">{T.perguntaN(asked.length + 1, MAX_AKIN)}</span>
             <button className="btn small quiet" onClick={() => showRound(session)}>
               {T.podeEscolher} <Ico name="ChevronRight" />
-            </button>
-          </div>
-        </div>
-      );
-      break;
-    }
-
-    case 'enredos': {
-      const { opts, page } = screen;
-      const pages = Math.ceil(opts.length / ENREDOS_POR_PAGINA);
-      const shown = opts.slice(page * ENREDOS_POR_PAGINA, (page + 1) * ENREDOS_POR_PAGINA);
-      const pick = (t: string) => showRound({ ...session, ctx: { ...session.ctx, themes: { ...session.ctx.themes, [t]: true } } });
-      body = (
-        <div className="screen ask enredos" key={'enredos' + page}>
-          <h1 className="headline">{T.qEnredo}</h1>
-          <div className="listing">
-            {shown.map((t, idx) => (
-              <button key={t} className="listing-row" data-autofocus={idx === 0 || undefined} onClick={() => pick(t)}>
-                {enredoLabel(t)}
-              </button>
-            ))}
-          </div>
-          <div className="row foot">
-            <button className="btn small quiet" onClick={onBack}>
-              <Ico name="ChevronLeft" /> {T.voltar}
-            </button>
-            {pages > 1 && (
-              <button className="btn small quiet" onClick={() => setScreen({ ...screen, page: (page + 1) % pages })}>
-                {page + 1 < pages ? T.maisEnredos : T.primeirosEnredos}
-                <span className="page-count">
-                  {page + 1} de {pages}
-                </span>
-              </button>
-            )}
-            <button className="btn small quiet" onClick={() => showRound(session)}>
-              {T.tantoFazEnredo} <Ico name="ChevronRight" />
             </button>
           </div>
         </div>

@@ -1,0 +1,100 @@
+5035 pas rom ris fel lev cla
+5045 ado mul rom ris cgr
+5050 mar ami ris pen via
+5061 jul ass ten vio pen cho
+5062 pas jul ver pen
+5063 mar bic via ten pen ado
+5066 her exp vio ten cgr
+5072 ani esp rob exp ten ami kid
+5080 ani fam kid ali cri lev fel ris cla
+5081 fam ali kid cri lev fel ris
+5087 ver pas sol fam pen
+5088 cgr jul ten pol
+5089 mul rom ris cgr fel sex cla
+5090 ver pen fel cho lev fam
+5098 mon rom ris vio ado mdo sex
+5102 ver sol pen cho vio pas cla
+5111 rom fam ten cpq sex
+5122 fam ris fel via ado cri
+5127 ani fal fut cri pen kid lev
+5128 mdo mus ris mon cgr vio
+5138 ami mar ris ten
+5139 fam rom pen cho pas sol mor
+5143 agt ten pen cho cgr
+5149 ani ado ami pen lev kid
+5160 lad cgr ris vio ten
+5164 fut ten rob per vio
+5166 pas rom sex cho ado mul
+5177 ver sol ten vio exp mor
+5179 fut ado ten vio des
+5180 pas sol ver exp lut
+5181 rom cho pen
+5185 mul agt ten vio exp per seg ris
+5186 mdo pol ass seg ten vio mul
+5197 fut tem ten vio per exp ass
+5200 mag mon lut exp vio cla ten
+5201 mag mon lut exp vio cla ten
+5202 lad ten vio cgr sol
+5203 atl ver ado ami fel
+5214 mdo mon ado ris vio cpq ten
+5217 ver pol pen mor cgr
+5225 rom ris cgr fel
+5227 ado ami ris cpq cla mus
+5240 ris cgr rom ten ass lad
+5242 mdo vio ado ten
+5253 rom sex vio ten cpq
+5255 fan ass mor pen cri ten vio
+5262 rom doe sex ris
+5284 ani ami mar mon ado kid lev fel ris
+5298 ten vio cgr ass seg
+5299 rom sol cho pen
+5304 pas rom cho
+5305 rom ris fel cgr
+5306 mdo fam vio ten mon
+5307 mdo cgr mon vio ten
+5308 mdo fam mon vio ten
+5311 rom cgr pen cho
+5317 pas rom ris cgr pb cho fel cla
+5320 rob mdo ten vio cri fam
+5329 mdo ten pen
+5332 bra mag ris pen
+5335 ani bic kid ris cgr mar fel lev fal
+5352 fut vio ten per des exp
+5353 fut vio ten per exp des
+5355 fut vio ten per exp des mul
+5363 mus ver rom cgr pen
+5367 rom sex mus cgr
+5369 pas fal mag can ami cri kid mul cla mdo ris fel
+5372 cgr mor cho pen ten fam doe
+5387 atl ris ami fel lev
+5392 ver pen ten vio ass
+5393 mag rei mul bic ten fel
+5401 rom ris ami sex lev
+5403 bra fam mul pen cho
+5404 pas mul ten pen cgr cla
+5411 esp ten exp lut
+5412 ver pen cho
+5416 pen
+5418 agt ris ten exp cgr
+5427 pas ver pen
+5429 her ali esp exp vio ten des
+5435 vio ten per ass cgr mor cri
+5436 ver ris pen
+5437 ver ten cgr
+5451 pas pen ten pb cla
+5456 cgr vio ten ass lad
+5460 pas mus pen cgr cho
+5461 bic nev fam kid lev
+5469 cgr ten pen des
+5471 mus ver cho pen mul
+5476 pas rei rom ris mul
+5481 bic fam ris cho fel kid
+5484 ani bic cho pen
+5493 ten vio sex pen
+5495 esp ten fel ris cla lev
+5500 pas rom cgr
+5502 cgr ris atl ten
+5504 her mul exp ten
+5511 mag can mus cri kid fam ris fel cla lev
+5514 sol med ris pas vio
+5515 mag ris cgr lev kid cla
