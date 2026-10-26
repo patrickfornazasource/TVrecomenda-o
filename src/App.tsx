@@ -6,7 +6,8 @@ import { buildProfileFromPicks, candidatePool, emptyProfile, learn, prepare, rec
 import type { Catalog, Context, Item, Pick, Profile, Reason, UserEvent } from './engine/types';
 import { focusFirst, useRemote } from './nav';
 import { decidedTonight, load, save, savedIds, type Stored } from './storage';
-import { COMPANIES, FAV_Q, GENRE_ICON, GENRE_PT, GENRES_Q, PICKS, REASONS, T, TIMES, YES_NO } from './textos';
+import { COMPANIES, FAV_Q, GENRE_PT, PICKS, REASONS, T, TIMES, YES_NO } from './textos';
+import { Ico } from './icones';
 
 const P = prepare(catalogJson as Catalog);
 
@@ -40,6 +41,27 @@ interface Session {
 const newSession = (): Session => ({ ctx: { shown: [], rejections: [] }, rejects: 0, askedExtra: false });
 
 const ENREDOS_POR_PAGINA = 8;
+
+// Cor de seção de cada tela, como nas seções de uma revista de programação
+const SCREEN_TONE: Record<Screen['name'], string> = {
+  gosto: 'tomate',
+  home: 'tomate',
+  yn: 'tomate',
+  time: 'tomate',
+  company: 'tomate',
+  extra: 'tomate',
+  tema: 'gema',
+  enredos: 'gema',
+  result: 'petroleo',
+  final: 'petroleo',
+  why: 'petroleo',
+  seen: 'petroleo',
+  empty: 'petroleo',
+  decided: 'gema',
+  later: 'rosa',
+  laterItem: 'rosa',
+  history: 'rosa',
+};
 
 export default function App() {
   const [store, setStore] = useState<Stored>(() => load());
@@ -307,15 +329,18 @@ export default function App() {
       const nSaved = savedIds(store.events).length;
       body = (
         <div className="screen home">
-          <div className="brand">🍿 {T.appName}</div>
+          <header className="cover-mast">
+            <p className="logo">{T.appName}</p>
+            <p className="cover-date">{hoje()}</p>
+          </header>
           {it ? (
-            <div className="tonight">
-              <p className="muted big">{T.inicioJaDecidido}</p>
-              <h1 className="title-xl">{it.t}</h1>
-              <p className="big">{T.inicioBomFilme}</p>
+            <div className="cover-main">
+              <p className="lede">{T.inicioJaDecidido}</p>
+              <h1 className="display">{it.t}</h1>
+              <p className="lede">{T.inicioBomFilme}</p>
               <div className="row">
                 <button className="btn primary" data-autofocus onClick={() => setScreen({ name: 'decided', id: it.i })}>
-                  👍 Ok
+                  <Ico name="Check" /> Ok
                 </button>
                 <button className="btn" onClick={start}>
                   {T.inicioOutro}
@@ -323,26 +348,27 @@ export default function App() {
               </div>
             </div>
           ) : (
-            <>
+            <div className="cover-main">
               <button className="btn hero" data-autofocus onClick={start}>
-                {T.inicioPergunta}
+                <span>{T.inicioPergunta}</span>
+                <Ico name="ChevronRight" className="hero-arrow" />
               </button>
               <button className="btn secondary" onClick={decideForMe}>
-                🎯 {T.inicioDecidir}
+                <Ico name="Dices" /> {T.inicioDecidir}
               </button>
-            </>
+            </div>
           )}
-          <div className="row small-row">
-            <button className="btn small" onClick={() => setScreen({ name: 'later' })}>
-              🔖 {T.inicioDepois(nSaved)}
+          <nav className="row small-row">
+            <button className="btn small quiet" onClick={() => setScreen({ name: 'later' })}>
+              <Ico name="Bookmark" /> {T.inicioDepois(nSaved)}
             </button>
-            <button className="btn small" onClick={() => setScreen({ name: 'history' })}>
-              ✅ {T.inicioHistorico}
+            <button className="btn small quiet" onClick={() => setScreen({ name: 'history' })}>
+              <Ico name="History" /> {T.inicioHistorico}
             </button>
-            <button className="btn small" onClick={() => setScreen({ name: 'gosto' })}>
-              ❤️ {T.inicioGosto}
+            <button className="btn small quiet" onClick={() => setScreen({ name: 'gosto' })}>
+              <Ico name="Heart" /> {T.inicioGosto}
             </button>
-          </div>
+          </nav>
         </div>
       );
       break;
@@ -351,7 +377,7 @@ export default function App() {
     case 'yn': {
       const { node, path } = screen;
       const fav = node === 'fav' ? favorite(stats, profile.picks) : null;
-      const q = fav ? { q: `Hoje é dia de ${FAV_Q[fav]}?`, icon: GENRES_Q.find((g) => g.id === fav)?.icon ?? '⭐' } : YES_NO[node as Exclude<Node, 'fav'>];
+      const q = fav ? { q: `Hoje é dia de ${FAV_Q[fav]}?` } : YES_NO[node as Exclude<Node, 'fav'>];
       const choose = (mood: Context['mood']) => {
         // começou pelo favorito e acabou em outro gênero: conta como um Não ao favorito
         const startFav = (path[0] ?? node) === 'fav' ? favorite(stats, profile.picks) : null;
@@ -368,10 +394,8 @@ export default function App() {
       };
       body = (
         <div className="screen ask yn" key={node}>
-          <p className="kicker">{T.kickerSimNao}</p>
           <div className="yn-q">
-            <span className="yn-icon">{q.icon}</span>
-            <h1 className="title-xl">{q.q}</h1>
+            <h1 className="display">{q.q}</h1>
           </div>
           <div className="row yn-row">
             <button className="btn choice yn-btn primary" data-autofocus onClick={() => answer('sim')}>
@@ -384,9 +408,11 @@ export default function App() {
               {T.tantoFazGenero}
             </button>
           </div>
-          <button className="btn small back" onClick={onBack}>
-            ◀ {T.voltar}
-          </button>
+          <div className="row foot">
+            <button className="btn small quiet" onClick={onBack}>
+              <Ico name="ChevronLeft" /> {T.voltar}
+            </button>
+          </div>
         </div>
       );
       break;
@@ -394,7 +420,7 @@ export default function App() {
 
     case 'time':
       body = (
-        <Question kicker={T.kickerTempo} title={T.qTempo} back={() => setScreen(lastQuestion)} cols={3}>
+        <Question title={T.qTempo} back={() => setScreen(lastQuestion)} cols={3}>
           {TIMES.map((t, idx) => (
             <button
               key={t.id}
@@ -405,7 +431,7 @@ export default function App() {
                 setScreen({ name: 'company' });
               }}
             >
-              <span className="icon">{t.icon}</span>
+              <Ico name={t.icon} className="choice-ico" />
               {t.label}
             </button>
           ))}
@@ -415,7 +441,7 @@ export default function App() {
 
     case 'company':
       body = (
-        <Question kicker={T.kickerCompanhia} title={T.qCompanhia} back={() => setScreen({ name: 'time' })} cols={4}>
+        <Question title={T.qCompanhia} back={() => setScreen({ name: 'time' })} cols={4}>
           {COMPANIES.map((c, idx) => (
             <button
               key={c.id}
@@ -423,7 +449,7 @@ export default function App() {
               data-autofocus={idx === 0 || undefined}
               onClick={() => askTema({ ...session, ctx: { ...session.ctx, company: c.id, themes: {} } })}
             >
-              <span className="icon">{c.icon}</span>
+              <Ico name={c.icon} className="choice-ico" />
               {c.label}
             </button>
           ))}
@@ -441,10 +467,8 @@ export default function App() {
       };
       body = (
         <div className="screen ask yn" key={t}>
-          <p className="kicker">{T.kickerTema}</p>
           <div className="yn-q">
-            <span className="yn-icon">{tema.icon}</span>
-            <h1 className="title-xl">{tema.q}</h1>
+            <h1 className="display">{tema.q}</h1>
           </div>
           <div className="row yn-row">
             <button className="btn choice yn-btn primary" data-autofocus onClick={() => answer(true)}>
@@ -457,12 +481,12 @@ export default function App() {
               {T.tantoFazGenero}
             </button>
           </div>
-          <div className="row yn-foot">
-            <button className="btn small" onClick={onBack}>
-              ◀ {T.voltar}
+          <div className="row foot">
+            <button className="btn small quiet" onClick={onBack}>
+              <Ico name="ChevronLeft" /> {T.voltar}
             </button>
-            <button className="btn small" onClick={() => showRound(session)}>
-              {T.podeEscolher} ▶
+            <button className="btn small quiet" onClick={() => showRound(session)}>
+              {T.podeEscolher} <Ico name="ChevronRight" />
             </button>
           </div>
         </div>
@@ -477,30 +501,28 @@ export default function App() {
       const pick = (t: string) => showRound({ ...session, ctx: { ...session.ctx, themes: { ...session.ctx.themes, [t]: true } } });
       body = (
         <div className="screen ask enredos" key={'enredos' + page}>
-          <p className="kicker">
-            {T.kickerTema}
-            {pages > 1 && ` · ${page + 1} de ${pages}`}
-          </p>
-          <h1 className="title-xl">{T.qEnredo}</h1>
-          <div className="grid cols-4 enredo-grid">
+          <h1 className="headline">{T.qEnredo}</h1>
+          <div className="listing">
             {shown.map((t, idx) => (
-              <button key={t} className="btn choice enredo" data-autofocus={idx === 0 || undefined} onClick={() => pick(t)}>
-                <span className="icon">{temaInfo(t)!.icon}</span>
+              <button key={t} className="listing-row" data-autofocus={idx === 0 || undefined} onClick={() => pick(t)}>
                 {enredoLabel(t)}
               </button>
             ))}
           </div>
-          <div className="row yn-foot">
-            <button className="btn small" onClick={onBack}>
-              ◀ {T.voltar}
+          <div className="row foot">
+            <button className="btn small quiet" onClick={onBack}>
+              <Ico name="ChevronLeft" /> {T.voltar}
             </button>
             {pages > 1 && (
-              <button className="btn small" onClick={() => setScreen({ ...screen, page: (page + 1) % pages })}>
-                {page + 1 < pages ? T.maisEnredos : T.primeirosEnredos} ▶
+              <button className="btn small quiet" onClick={() => setScreen({ ...screen, page: (page + 1) % pages })}>
+                {page + 1 < pages ? T.maisEnredos : T.primeirosEnredos}
+                <span className="page-count">
+                  {page + 1} de {pages}
+                </span>
               </button>
             )}
-            <button className="btn small" onClick={() => showRound(session)}>
-              {T.tantoFazEnredo} ▶
+            <button className="btn small quiet" onClick={() => showRound(session)}>
+              {T.tantoFazEnredo} <Ico name="ChevronRight" />
             </button>
           </div>
         </div>
@@ -514,28 +536,27 @@ export default function App() {
       const final = screen.name === 'final';
       body = (
         <div className="screen result">
-          <p className="kicker">{final ? T.definitiva : T.resTitulo}</p>
           <div className="result-grid">
             <div className={'main-card' + (spinning === 0 ? ' spin-hit' : '')}>
-              <BigCard pick={r.main} />
+              <BigCard pick={r.main} label={final ? T.definitiva : T.resTitulo} />
               <div className="row actions">
                 <button className="btn primary" data-autofocus onClick={idle(() => accept(r.main.item))}>
-                  ▶ {T.vamos}
+                  <Ico name="Play" /> {T.vamos}
                 </button>
                 {!final && (
                   <>
                     <button className="btn" onClick={idle(() => setScreen({ name: 'why' }))}>
-                      🔄 {T.outra}
+                      <Ico name="RefreshCw" /> {T.outra}
                     </button>
                     <button className="btn" onClick={idle(() => setScreen({ name: 'seen' }))}>
-                      👀 {T.jaVi}
+                      <Ico name="Eye" /> {T.jaVi}
                     </button>
                   </>
                 )}
               </div>
             </div>
             <div className="alts">
-              {!final && <p className="muted">{T.resAlternativas}</p>}
+              {!final && r.alternatives.length > 0 && <h2 className="alts-head">{T.resAlternativas}</h2>}
               {!final &&
                 r.alternatives.map((a, idx) => (
                   <button key={a.item.i} className={'alt-card' + (spinning === idx + 1 ? ' spin-hit' : '')} onClick={idle(() => swapMain(idx))}>
@@ -544,11 +565,11 @@ export default function App() {
                 ))}
               <div className="alt-actions">
                 <button className="btn" onClick={idle(() => saveLater(r.main.item))}>
-                  🔖 {T.depois}
+                  <Ico name="Bookmark" /> {T.depois}
                 </button>
                 {r.alternatives.length > 0 && (
                   <button className="btn" onClick={idle(spin)}>
-                    🎲 {spinning !== null ? T.sorteando : T.sortear}
+                    <Ico name="Dices" /> {spinning !== null ? T.sorteando : T.sortear}
                   </button>
                 )}
               </div>
@@ -563,8 +584,8 @@ export default function App() {
     case 'why':
       body = (
         <div className="screen ask">
-          <h1 className="title-l">{T.porQue}</h1>
-          <p className="muted big">{T.porQueSub}</p>
+          <h1 className="headline">{T.porQue}</h1>
+          <p className="lede">{T.porQueSub}</p>
           <div className="grid cols-3">
             {REASONS.map((r, idx) => (
               <button key={r.id} className="btn choice short" data-autofocus={idx === 0 || undefined} onClick={() => reject(r.id)}>
@@ -582,14 +603,14 @@ export default function App() {
     case 'seen':
       body = (
         <div className="screen ask">
-          <h1 className="title-l">{T.gostou}</h1>
-          <p className="muted big">{session.round?.main.item.t}</p>
+          <h1 className="headline">{T.gostou}</h1>
+          <p className="lede">{session.round?.main.item.t}</p>
           <div className="grid cols-3">
             <button className="btn choice short" data-autofocus onClick={() => seen(true)}>
-              👍 {T.gostei}
+              <Ico name="ThumbsUp" /> {T.gostei}
             </button>
             <button className="btn choice short" onClick={() => seen(false)}>
-              👎 {T.naoGostei}
+              <Ico name="ThumbsDown" /> {T.naoGostei}
             </button>
             <button className="btn choice short ghost" onClick={() => seen(undefined)}>
               {T.pular}
@@ -604,34 +625,33 @@ export default function App() {
       const choose = (patch: Partial<Context>) => showRound({ ...session, askedExtra: true, ctx: { ...session.ctx, ...patch } });
       body = (
         <div className="screen ask">
-          <p className="kicker">{T.faltando}</p>
-          <h1 className="title-l">{isType ? T.filmeOuSerie : T.antigoOuNovo}</h1>
+          <h1 className="headline">{isType ? T.filmeOuSerie : T.antigoOuNovo}</h1>
           <div className="grid cols-3">
             {isType ? (
               <>
                 <button className="btn choice" data-autofocus onClick={() => choose({ type: 'm', time: session.ctx.time === 'maratona' ? 'medio' : session.ctx.time })}>
-                  <span className="icon">🎬</span>
+                  <Ico name="Film" className="choice-ico" />
                   {T.filme}
                 </button>
                 <button className="btn choice" onClick={() => choose({ type: 's', time: 'maratona' })}>
-                  <span className="icon">📺</span>
+                  <Ico name="Tv" className="choice-ico" />
                   {T.serie}
                 </button>
               </>
             ) : (
               <>
                 <button className="btn choice" data-autofocus onClick={() => choose({ era: 'antigo' })}>
-                  <span className="icon">📻</span>
+                  <Ico name="Radio" className="choice-ico" />
                   {T.antigo}
                 </button>
                 <button className="btn choice" onClick={() => choose({ era: 'novo' })}>
-                  <span className="icon">✨</span>
+                  <Ico name="Sparkles" className="choice-ico" />
                   {T.novo}
                 </button>
               </>
             )}
             <button className="btn choice ghost" onClick={() => choose({})}>
-              <span className="icon">🤷</span>
+              <Ico name="Shuffle" className="choice-ico" />
               {T.tantoFaz}
             </button>
           </div>
@@ -644,16 +664,15 @@ export default function App() {
       const it = P.byId.get(screen.id)!;
       body = (
         <div className="screen decided">
-          <div className="confetti">🎉</div>
-          <h1 className="title-xl accent">{T.decidido}</h1>
-          <h2 className="title-l">{it.t}</h2>
-          <p className="big muted">{meta(it).join(' · ')}</p>
+          <p className="stamp">{T.decidido}</p>
+          <h1 className="display">{it.t}</h1>
+          <p className="lede num">{meta(it).join(' · ')}</p>
           {it.st?.length ? (
-            <p className="big where">
-              📺 {T.ondeAssistir} <strong>{it.st.join(', ')}</strong>
+            <p className="lede where">
+              {T.ondeAssistir} <strong>{it.st.join(', ')}</strong>
             </p>
           ) : null}
-          <p className="title-l">{it.k === 's' ? T.bomSerie : T.bomFilme} 🍿</p>
+          <p className="headline">{it.k === 's' ? T.bomSerie : T.bomFilme}</p>
           <button className="btn primary" data-autofocus onClick={() => setScreen({ name: 'home' })}>
             {T.inicio}
           </button>
@@ -665,7 +684,7 @@ export default function App() {
     case 'empty':
       body = (
         <div className="screen ask">
-          <h1 className="title-l">{T.nadaAchado}</h1>
+          <h1 className="headline">{T.nadaAchado}</h1>
           <button className="btn primary" data-autofocus onClick={start}>
             {T.recomecar}
           </button>
@@ -691,12 +710,11 @@ export default function App() {
       const it = P.byId.get(screen.id)!;
       body = (
         <div className="screen result">
-          <p className="kicker">{T.depoisTitulo}</p>
           <div className="main-card solo">
-            <BigCard pick={{ item: it, score: 0, why: '' }} />
+            <BigCard pick={{ item: it, score: 0, why: '' }} label={T.depoisTitulo} />
             <div className="row actions">
               <button className="btn primary" data-autofocus onClick={() => accept(it)}>
-                ▶ {T.assistirEste}
+                <Ico name="Play" /> {T.assistirEste}
               </button>
               <button
                 className="btn"
@@ -705,7 +723,7 @@ export default function App() {
                   setScreen({ name: 'later' });
                 }}
               >
-                🗑️ {T.tirarLista}
+                <Ico name="Trash2" /> {T.tirarLista}
               </button>
               <button className="btn" onClick={() => setScreen({ name: 'later' })}>
                 {T.voltar}
@@ -737,7 +755,13 @@ export default function App() {
   }
 
   return (
-    <div className="stage" ref={rootRef}>
+    <div className={'stage tone-' + SCREEN_TONE[screen.name]} ref={rootRef}>
+      {screen.name !== 'home' && (
+        <header className="masthead">
+          <span className="mast-name">{T.appName}</span>
+          <span className="mast-date">{hoje()}</span>
+        </header>
+      )}
       {body}
     </div>
   );
@@ -766,62 +790,67 @@ function meta(it: Item) {
   return [kindLabel(it), String(it.y), duration(it)].filter(Boolean);
 }
 
-function icon(it: Item) {
-  return GENRE_ICON[P.catalog.genres[it.g[0]]] ?? '🎬';
+// Cada título ganha uma das cores de seção da revista, pelo gênero principal
+const TONES = ['tomate', 'petroleo', 'gema', 'rosa'];
+function tone(it: Item) {
+  return TONES[it.g[0] % TONES.length];
 }
 
-function hue(it: Item) {
-  return (it.g[0] * 47 + 200) % 360;
+function hoje() {
+  const d = new Date().toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' });
+  return d.charAt(0).toUpperCase() + d.slice(1);
 }
 
-function BigCard({ pick }: { pick: Pick }) {
+function BigCard({ pick, label }: { pick: Pick; label: string }) {
   const it = pick.item;
   return (
-    <div className="big-card" style={{ ['--h' as string]: hue(it) }}>
-      <div className="poster">
-        <span>{icon(it)}</span>
+    <article className="feature">
+      <div className={'cover tone-' + tone(it)}>
+        <span className="cover-kind">{label}</span>
+        <span className="cover-genre">{genresPt(it)[0]}</span>
+        <span className="cover-year">{it.y}</span>
       </div>
       <div className="info">
-        <h1 className="title-l">{it.t}</h1>
-        {it.o && <p className="orig">{it.o}</p>}
+        <h1 className="feature-title">{it.t}</h1>
+        {it.o && it.o !== it.t && <p className="orig">{it.o}</p>}
         <p className="meta">
           {meta(it).join(' · ')}
-          {it.n != null && <span className="stars"> · ★ {it.n.toFixed(1).replace('.', ',')}</span>}
+          {it.n != null && <span className="stars"> · nota {it.n.toFixed(1).replace('.', ',')}</span>}
         </p>
-        <p className="genres">{genresPt(it).slice(0, 3).join(' · ')}</p>
         {it.s && <p className="synopsis">{it.s}</p>}
-        {pick.why && <p className="why">💡 {pick.why}</p>}
+        {pick.why && <p className="why">{pick.why}</p>}
         {it.st?.length ? (
           <p className="where">
-            📺 {T.ondeAssistir} <strong>{it.st.join(', ')}</strong>
+            {T.ondeAssistir} <strong>{it.st.join(', ')}</strong>
           </p>
         ) : null}
       </div>
-    </div>
+    </article>
   );
 }
 
-function SmallCard({ item, note, check }: { item: Item; note?: string; check?: boolean }) {
+function SmallCard({ item, note }: { item: Item; note?: string }) {
   return (
-    <div className="small-card" style={{ ['--h' as string]: hue(item) }}>
-      <span className="s-icon">{check ? '✅' : icon(item)}</span>
+    <div className="small-card">
+      <span className={'swatch tone-' + tone(item)}>{item.y}</span>
       <span className="s-text">
         <span className="s-title">{item.t}</span>
-        <span className="s-meta">{note ?? meta(item).slice(0, 2).join(' · ')}</span>
+        <span className="s-meta">{note ?? [kindLabel(item), genresPt(item)[0]].join(' · ')}</span>
       </span>
     </div>
   );
 }
 
-function Question(props: { kicker: string; title: string; back: () => void; cols: number; children: React.ReactNode }) {
+function Question(props: { title: string; back: () => void; cols: number; children: React.ReactNode }) {
   return (
     <div className="screen ask">
-      <p className="kicker">{props.kicker}</p>
-      <h1 className="title-l">{props.title}</h1>
+      <h1 className="headline">{props.title}</h1>
       <div className={`grid cols-${props.cols}`}>{props.children}</div>
-      <button className="btn small back" onClick={props.back}>
-        ◀ {T.voltar}
-      </button>
+      <div className="row foot">
+        <button className="btn small quiet" onClick={props.back}>
+          <Ico name="ChevronLeft" /> {T.voltar}
+        </button>
+      </div>
     </div>
   );
 }
@@ -829,11 +858,13 @@ function Question(props: { kicker: string; title: string; back: () => void; cols
 function ListScreen(props: { title: string; empty: string; back: () => void; children: React.ReactNode[] }) {
   return (
     <div className="screen list">
-      <h1 className="title-l">{props.title}</h1>
-      {props.children.length ? <div className="grid cols-4 tiles">{props.children}</div> : <p className="big muted">{props.empty}</p>}
-      <button className="btn small back" data-autofocus={!props.children.length || undefined} onClick={props.back}>
-        ◀ {T.voltar}
-      </button>
+      <h1 className="headline">{props.title}</h1>
+      {props.children.length ? <div className="grid cols-3 tiles">{props.children}</div> : <p className="lede">{props.empty}</p>}
+      <div className="row foot">
+        <button className="btn small quiet" data-autofocus={!props.children.length || undefined} onClick={props.back}>
+          <Ico name="ChevronLeft" /> {T.voltar}
+        </button>
+      </div>
     </div>
   );
 }
@@ -845,8 +876,8 @@ function Gosto(props: { picked: string[]; setPicked: (ids: string[]) => void; do
     <div className="screen onboarding">
       <div className="onb-head">
         <div>
-          <h1 className="title-l">{T.gostoTitulo}</h1>
-          <p className="muted">{T.gostoSub}</p>
+          <h1 className="headline">{T.gostoTitulo}</h1>
+          <p className="lede">{T.gostoSub}</p>
         </div>
       </div>
       <div className="grid cols-3 tiles onb-grid">
@@ -854,7 +885,7 @@ function Gosto(props: { picked: string[]; setPicked: (ids: string[]) => void; do
           const on = props.picked.includes(g.id);
           return (
             <button key={g.id} className={'tile pick' + (on ? ' on' : '')} data-autofocus={idx === 0 || undefined} onClick={() => toggle(g.id)} aria-pressed={on}>
-              <span className="pick-icon">{on ? '✅' : g.icon}</span>
+              <Ico name={on ? 'Check' : g.icon} className="pick-icon" />
               <span className="pick-label">{g.label}</span>
             </button>
           );
@@ -862,7 +893,7 @@ function Gosto(props: { picked: string[]; setPicked: (ids: string[]) => void; do
       </div>
       <div className="row onb-actions">
         <button className={'btn' + (props.picked.length ? ' primary' : '')} onClick={props.done}>
-          ✔ {T.gostoPronto}
+          <Ico name="Check" /> {T.gostoPronto}
         </button>
         {!props.picked.length && (
           <button className="btn ghost" onClick={props.skip}>

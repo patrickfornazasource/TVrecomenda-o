@@ -1,6 +1,7 @@
 // Todos os textos da interface ficam aqui, para ajustar o tom num lugar só.
 import type { Node } from './engine/perguntas';
 import type { Company, Mood, Reason, TimeBudget } from './engine/types';
+import type { IconName } from './icones';
 
 export const T = {
   appName: 'Escolhe pra Mim',
@@ -23,10 +24,6 @@ export const T = {
 
   // Perguntas
   qGenero: 'Que tipo de filme você quer ver hoje?',
-  kickerSimNao: 'Para escolher o filme',
-  kickerTempo: 'Sobre o tempo',
-  kickerCompanhia: 'Sobre a companhia',
-  kickerTema: 'Sobre a história',
   podeEscolher: 'Já está bom, pode escolher',
   qEnredo: 'Que tipo de história?',
   maisEnredos: 'Mais histórias',
@@ -92,13 +89,13 @@ export const T = {
 } as const;
 
 // Perguntas de sim ou não (ver engine/perguntas.ts)
-export const YES_NO: Record<Exclude<Node, 'fav'>, { q: string; icon: string }> = {
-  leve: { q: 'Quer algo leve, para relaxar?', icon: '🛋️' },
-  rir: { q: 'Quer dar risada?', icon: '😂' },
-  amor: { q: 'Que tal um romance?', icon: '❤️' },
-  tensa: { q: 'Quer algo de prender a atenção, com suspense ou ação?', icon: '😮' },
-  susto: { q: 'Quer levar um susto? (filme de terror)', icon: '👻' },
-  emocionar: { q: 'Quer uma história que emociona?', icon: '🥹' },
+export const YES_NO: Record<Exclude<Node, 'fav'>, { q: string; icon: IconName }> = {
+  leve: { q: 'Quer algo leve, para relaxar?', icon: 'Sofa' },
+  rir: { q: 'Quer dar risada?', icon: 'Laugh' },
+  amor: { q: 'Que tal um romance?', icon: 'Heart' },
+  tensa: { q: 'Quer algo de prender a atenção, com suspense ou ação?', icon: 'Zap' },
+  susto: { q: 'Quer levar um susto? (filme de terror)', icon: 'Ghost' },
+  emocionar: { q: 'Quer uma história que emociona?', icon: 'Drama' },
 };
 
 // "Hoje é dia de ...?"
@@ -114,36 +111,36 @@ export const FAV_Q: Partial<Record<Mood, string>> = {
 };
 
 // Tipos de filme, do jeito que ela fala (usados na tela "Meu gosto")
-export const GENRES_Q: { id: Mood | undefined; label: string; icon: string }[] = [
-  { id: 'comedia', label: 'Comédia', icon: '😂' },
-  { id: 'romance', label: 'Romance', icon: '❤️' },
-  { id: 'drama', label: 'Drama', icon: '🎭' },
-  { id: 'acao', label: 'Ação e aventura', icon: '💥' },
-  { id: 'suspense', label: 'Suspense e mistério', icon: '🔍' },
-  { id: 'desenho', label: 'Desenho e família', icon: '🧸' },
-  { id: 'novela', label: 'Novela', icon: '💐' },
-  { id: 'ficcao', label: 'Ficção e fantasia', icon: '🚀' },
-  { id: 'terror', label: 'Terror', icon: '👻' },
-  { id: undefined, label: 'Tanto faz', icon: '🤷' },
+export const GENRES_Q: { id: Mood | undefined; label: string; icon: IconName }[] = [
+  { id: 'comedia', label: 'Comédia', icon: 'Laugh' },
+  { id: 'romance', label: 'Romance', icon: 'Heart' },
+  { id: 'drama', label: 'Drama', icon: 'Drama' },
+  { id: 'acao', label: 'Ação e aventura', icon: 'Zap' },
+  { id: 'suspense', label: 'Suspense e mistério', icon: 'Search' },
+  { id: 'desenho', label: 'Desenho e família', icon: 'ToyBrick' },
+  { id: 'novela', label: 'Novela', icon: 'Flower2' },
+  { id: 'ficcao', label: 'Ficção e fantasia', icon: 'Rocket' },
+  { id: 'terror', label: 'Terror', icon: 'Ghost' },
+  { id: undefined, label: 'Tanto faz', icon: 'Shuffle' },
 ];
 
 // Tela "Meu gosto": os mesmos tipos + produções brasileiras
-export const PICKS: { id: string; label: string; icon: string }[] = [
+export const PICKS: { id: string; label: string; icon: IconName }[] = [
   ...GENRES_Q.filter((g) => g.id && g.id !== 'terror').map((g) => ({ id: g.id as string, label: g.label, icon: g.icon })),
-  { id: 'brasil', label: 'Coisas brasileiras', icon: '🇧🇷' },
+  { id: 'brasil', label: 'Coisas brasileiras', icon: 'Sun' },
 ];
 
-export const COMPANIES: { id: Company; label: string; icon: string }[] = [
-  { id: 'sozinha', label: 'Sozinha', icon: '🙋' },
-  { id: 'alguem', label: 'Com alguém', icon: '👫' },
-  { id: 'familia', label: 'Em família, com crianças', icon: '🧒' },
-  { id: 'amigos', label: 'Com amigos', icon: '🎉' },
+export const COMPANIES: { id: Company; label: string; icon: IconName }[] = [
+  { id: 'sozinha', label: 'Sozinha', icon: 'UserRound' },
+  { id: 'alguem', label: 'Com alguém', icon: 'UsersRound' },
+  { id: 'familia', label: 'Em família, com crianças', icon: 'Baby' },
+  { id: 'amigos', label: 'Com amigos', icon: 'PartyPopper' },
 ];
 
-export const TIMES: { id: TimeBudget; label: string; icon: string }[] = [
-  { id: 'curto', label: 'Até 1 hora e meia', icon: '⏱️' },
-  { id: 'medio', label: 'Umas 2 horas', icon: '🕑' },
-  { id: 'maratona', label: 'Bastante tempo (série ou novela)', icon: '📺' },
+export const TIMES: { id: TimeBudget; label: string; icon: IconName }[] = [
+  { id: 'curto', label: 'Até 1 hora e meia', icon: 'Timer' },
+  { id: 'medio', label: 'Umas 2 horas', icon: 'Clock' },
+  { id: 'maratona', label: 'Bastante tempo (série ou novela)', icon: 'Tv' },
 ];
 
 export const REASONS: { id: Reason; label: string }[] = [
@@ -176,28 +173,4 @@ export const GENRE_PT: Record<string, string> = {
   Thriller: 'Suspense',
   War: 'Guerra',
   Western: 'Faroeste',
-};
-
-export const GENRE_ICON: Record<string, string> = {
-  Action: '💥',
-  Adventure: '🧭',
-  Animation: '🎨',
-  Comedy: '😂',
-  Crime: '🕵️',
-  Documentary: '🎥',
-  Drama: '🎭',
-  Family: '🏡',
-  Fantasy: '✨',
-  History: '🏛️',
-  Horror: '👻',
-  Kids: '🧸',
-  Music: '🎵',
-  Mystery: '🔍',
-  Reality: '📡',
-  Romance: '❤️',
-  'Science Fiction': '🚀',
-  Soap: '💐',
-  Thriller: '😱',
-  War: '🎖️',
-  Western: '🤠',
 };
