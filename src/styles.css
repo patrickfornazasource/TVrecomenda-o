@@ -478,7 +478,25 @@ p {
   border-radius: 0.4rem;
 }
 .where {
-  font-size: 1.2rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  font-size: 1.3rem;
+  margin-top: 0.2rem;
+}
+.where strong {
+  color: var(--gema);
+}
+.where-ico {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: 0.05rem;
+  color: var(--gema);
+}
+.where-rent,
+.muted-where {
+  color: var(--muted);
+  font-size: 1.1rem;
 }
 .actions .btn {
   font-size: 1.4rem;

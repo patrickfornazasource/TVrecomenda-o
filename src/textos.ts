@@ -45,6 +45,10 @@ export const T = {
   sorteando: 'Sorteando…',
   trocar: 'Escolher este',
   ondeAssistir: 'Onde assistir:',
+  naAssinatura: 'Está em:',
+  paraAlugar: 'Para alugar:',
+  procurandoOnde: 'Procurando onde assistir…',
+  emNenhuma: 'Não está em nenhuma plataforma agora.',
   nadaAchado: 'Não achei nada com essas respostas.',
   recomecar: 'Recomeçar',
 

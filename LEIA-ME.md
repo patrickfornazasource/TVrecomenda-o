@@ -80,7 +80,9 @@ Uma versão nova só instala por cima da antiga (mantendo o histórico dela) se 
 
 - Os títulos e sinopses em português dos filmes do TMDB foram escritos por mim (Claude) e
   podem diferir um pouco do nome oficial no Brasil; o título original aparece logo abaixo.
-- Não há pôsteres nem "onde assistir" atualizado (só 118 títulos da base têm esse dado).
-  Isso entra na versão 2 com a API do TMDB.
+- Onde assistir: no resultado, a TV Box pergunta ao TMDB (dados da JustWatch) em quais plataformas do Brasil
+  o filme está e guarda por uma semana. Precisa de internet e de uma chave grátis do TMDB: crie o arquivo
+  `.env.local` com `VITE_TMDB_KEY=sua-chave` antes de gerar o APK (o arquivo fica fora do Git).
+  Sem a chave, o app funciona igual, só sem essa informação.
 - Os temas e enredos foram marcados por mim (Claude) só nos 2.419 títulos principais (camadas A e B); os da camada C ficam sem tema.
 - Filmes de 2018 em diante e séries não têm nota; pesam um pouco menos, como pede o briefing.

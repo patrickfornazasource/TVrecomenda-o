@@ -9,6 +9,7 @@ import { focusFirst, useRemote } from './nav';
 import { decidedTonight, load, save, savedIds, type Stored } from './storage';
 import { COMPANIES, FAV_Q, GENRE_PT, PICKS, REASONS, T, TIMES, YES_NO } from './textos';
 import { Ico } from './icones';
+import { useOnde } from './onde';
 
 const P = prepare(catalogJson as Catalog);
 
@@ -614,11 +615,7 @@ export default function App() {
           <p className="stamp">{T.decidido}</p>
           <h1 className="display">{it.t}</h1>
           <p className="lede num">{meta(it).join(' · ')}</p>
-          {it.st?.length ? (
-            <p className="lede where">
-              {T.ondeAssistir} <strong>{it.st.join(', ')}</strong>
-            </p>
-          ) : null}
+          <OndeAssistir item={it} />
           <p className="headline">{it.k === 's' ? T.bomSerie : T.bomFilme}</p>
           <button className="btn primary" data-autofocus onClick={() => setScreen({ name: 'home' })}>
             {T.inicio}
@@ -766,13 +763,33 @@ function BigCard({ pick, label }: { pick: Pick; label: string }) {
         </p>
         {it.s && <p className="synopsis">{it.s}</p>}
         {pick.why && <p className="why">{pick.why}</p>}
-        {it.st?.length ? (
-          <p className="where">
-            {T.ondeAssistir} <strong>{it.st.join(', ')}</strong>
-          </p>
-        ) : null}
+        <OndeAssistir item={it} />
       </div>
     </article>
+  );
+}
+
+function OndeAssistir({ item }: { item: Item }) {
+  const onde = useOnde(item);
+  if (onde === undefined) return <p className="where muted-where">{T.procurandoOnde}</p>;
+  if (onde === null) return null;
+  if (!onde.assinatura.length && !onde.aluguel.length) return <p className="where muted-where">{T.emNenhuma}</p>;
+  return (
+    <div className="where">
+      <Ico name="Tv" className="where-ico" />
+      <div>
+        {onde.assinatura.length > 0 && (
+          <p>
+            {T.naAssinatura} <strong>{onde.assinatura.join(', ')}</strong>
+          </p>
+        )}
+        {onde.aluguel.length > 0 && (
+          <p className="where-rent">
+            {T.paraAlugar} {onde.aluguel.join(', ')}
+          </p>
+        )}
+      </div>
+    </div>
   );
 }
 
